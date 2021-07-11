@@ -1,12 +1,30 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: amiko-font,sans-serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
 }
-
+* {
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+}
+@font-face {
+  font-family: amiko-font;
+  src: url("assets/fonts/Amiko-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: amiko-med;
+  src: url("assets/fonts/Amiko-SemiBold.ttf") format("opentype");
+}
+@font-face {
+  font-family: amiko-bold;
+  src: url("assets/fonts/Amiko-Bold.ttf") format("opentype");
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

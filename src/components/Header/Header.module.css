@@ -1,0 +1,55 @@
+.Header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 4% ;
+  display: flex;
+  justify-content: space-between;
+}
+.HeaderList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.Search {
+  margin-left: 2rem;
+}
+.NavHoverOpen {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  top: 5.5rem;
+  height: 70vh;
+  max-height: 0;
+  transition: all 0.4s ease-in-out;
+  background-color:white ;
+  z-index: 20 ;
+
+}
+.Navigation{
+  display: flex;
+  margin-top:1em;
+  padding-bottom: 0.8em;
+}
+.Navigation:hover .NavHoverOpen {
+  visibility: visible;
+  max-height: 70vh;
+}
+/* .Navigation:hover .Backdrop {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 5.5rem;
+
+  height: 100vh;
+  z-index: 5;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0, 0.5);
+} */

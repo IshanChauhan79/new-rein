@@ -1,0 +1,10 @@
+.Logo{
+    font-size: 3rem;
+    color: blue;
+    margin-right:3rem;
+    margin-top:0.5rem;
+
+}
+.Logo>img{
+    height:2.5rem;
+}

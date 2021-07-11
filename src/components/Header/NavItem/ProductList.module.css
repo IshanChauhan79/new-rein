@@ -1,0 +1,19 @@
+.ProductList {
+  position: absolute;
+  width: 100%;
+  right: -120%;
+  top: -10%;
+}
+.SubCategory {
+  padding: 1.4rem 0;
+  color: grey;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.SubCategory:hover {
+  font-size: 1.6rem;
+  color: black;
+  text-decoration: underline;
+}
