@@ -1,0 +1,182 @@
+.FeaturedProduct {
+  font-size: 1.5rem;
+  /* border: 1px solid black; */
+  margin: 5px;
+  border-radius: 1em;
+  padding: 5% 4%;
+  padding-bottom: 0;
+  position: relative;
+  background-color: #f4f4f4;
+
+  /* height: 200px; */
+  /* background-color: lightgray; */
+}
+.CatBig {
+  position: absolute;
+  font-size: 1.2rem;
+  font-family: amiko-med;
+  top: 2rem;
+  left: 2rem;
+  color: white;
+  border-radius: 1.6rem;
+  padding: 4px 6px;
+  padding-top: 6px;
+}
+
+.Cat {
+  position: absolute;
+  font-size: 1.1rem;
+  font-family: amiko-med;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  border-radius: 1.4rem;
+  padding: 3px 5px;
+  padding-top: 4px;
+}
+.Img {
+  /* border: 1px solid black; */
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.FeaturedProduct:hover .Img {
+  transform: scale(1.05);
+}
+.TitleBig {
+  font-size: 2.4rem;
+  font-family: amiko-med;
+  margin: 0.6rem 0;
+}
+.Title {
+  font-size: 1.7rem;
+  font-family: amiko-med;
+  margin: 0.3rem 0;
+}
+
+.Underline {
+  margin: auto;
+  width: 60%;
+  border-bottom: 2px solid black;
+}
+.DescBig {
+  font-size: 1.6rem !important;
+  width: 80%;
+  margin: auto;
+}
+
+.Desc {
+  font-size: 1.2rem;
+  font-family: amiko-med;
+  position: relative;
+  opacity: 1;
+  min-height: 3rem;
+  margin-top: 1rem;
+  -webkit-transform: rotate(0deg), translateY(0);
+  -ms-transform: rotate(0deg), translateY(0);
+  transform: rotateX(0deg) translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+.FeaturedProduct:hover .Desc {
+  opacity: 0;
+  -webkit-transform: rotateX(-60deg) translateY(-120%);
+  -ms-transform: rotateX(-60deg) translateY(-120%);
+  transform: rotateX(-60deg) translateY(-120%);
+}
+.Buy {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  font-family: amiko-med;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+  padding-bottom: 0.8rem;
+  border-radius: 1.6rem;
+
+  position: relative;
+  opacity: 0;
+  -webkit-transform: rotate(30deg), translateY(0);
+  -ms-transform: rotate(30deg), translateY(0);
+  transform: rotateX(30deg) translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+.FeaturedProduct:hover .Buy {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg) translateY(-100%);
+  -ms-transform: rotateX(0deg) translateY(-100%);
+  transform: rotateX(0deg) translateY(-100%);
+}
+.Buy:hover {
+  background-color: darkgray;
+}
+
+/* -webkit-transform: rotate(20deg), translateY(0);
+  -ms-transform: rotate(20deg), translateY(0);
+  transform: rotateX(0deg), translateY(0); */
+
+/* div.a {
+	position:relative;
+  top:20px;
+  width: 150px;
+  height: 80px;
+  opacity:0;
+  transform: rotateX(-60deg);
+  -ms-transform: rotate(20deg); 
+  
+  transition: all 0.5s ease-in-out
+}
+div.a:hover {
+top:0;
+opacity:1;
+
+  -ms-transform: rotate(20deg); 
+  transform: rotateX(0deg);
+} */
+
+/* 
+
+div.a {
+    border:1px solid black;
+        position:absolute;
+        height:50px;
+        top:60px; 
+      width: 150px;
+      -ms-transform: rotate(20deg); 
+      transform: rotateX(0deg);
+      opacity:1;
+      
+      
+      transition: all 0.5s ease-in-out
+    }
+    body:hover div.a {
+    
+    top:10px;
+    
+    
+    opacity:0;
+      transform: rotateX(-60deg);
+      -ms-transform: rotate(20deg); 
+    
+      
+    }
+    
+    div.b {
+    border:1px solid black;
+    height:50px;
+      position:absolute;
+        width: 150px;
+      top:110px;
+    opacity:0;
+      transform: rotateX(-60deg);
+      -ms-transform: rotate(20deg); 
+      transition: all 0.5s ease-in-out
+       
+    }
+    body:hover div.b {
+     top:60px; 
+      -ms-transform: rotate(20deg); 
+      transform: rotateX(0deg);
+      opacity:1;
+    
+    
+      
+    } */
