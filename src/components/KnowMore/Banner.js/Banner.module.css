@@ -1,0 +1,95 @@
+.Banner {
+  display: flex;
+  margin: 2rem 1rem;
+  position: relative;
+  box-shadow: 0px 0px 1.5rem 0.7rem hsl(0, 0%, 70%);
+
+}
+.RightAl {
+  flex-direction: row-reverse;
+  /* text-align: right; */
+}
+.Banner > div {
+  position: relative;
+  width: 50%;
+  /* margin: 3rem 0; */
+  min-height: 37rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 2rem 3rem;
+}
+.Title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  width: 80%;
+}
+
+.Underline {
+  width: 50%;
+  border-bottom: 2px solid black;
+  margin: 0.5rem;
+}
+.Product{
+    position:absolute;
+    min-width: 17rem;
+    width: 40%;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+}
+.KnowButton {
+  padding: 0.8rem 1rem;
+  padding-bottom: 0.7rem;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  border-radius: 2rem;
+  margin: 3rem 1rem;
+}
+
+.BannerImage {
+  padding: 0 !important;
+  overflow: hidden;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.KnowButton:hover {
+  background-color: gray;
+}
+.BottomText {
+  font-size: 1.3rem;
+  color: gray;
+  position: absolute;
+  bottom: 20%;
+  margin: auto;
+}
+.BottomText::after {
+  content: "Terms & Condition Apply";
+  position: absolute;
+  font-size: 1rem;
+  bottom: -100%;
+  right: 10%;
+}
+.SubImage {
+  width: 40%;
+  margin: 0.6rem 0.6rem;
+}
+.SubText {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.6rem;
+  color: gray;
+}
+
+@media only screen and (max-width: 47em) {
+  .Banner {
+    flex-direction: column-reverse;
+    margin: 3rem 0;
+  }
+  .Banner > div {
+    width: 100%;
+    margin: 0 !important;
+  }
+}

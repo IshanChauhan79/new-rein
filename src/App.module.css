@@ -1,5 +1,9 @@
-/* .App { */
-  /* text-align: center; */
-  /* background-color: blue; */
- /* height:2000px; */
-/* } */
+.App {
+  padding-top: 3rem;
+}
+.Disclaimer{
+  text-align: center;
+  font-size: 1.2rem;
+  color:gray;
+  margin:1rem;
+}

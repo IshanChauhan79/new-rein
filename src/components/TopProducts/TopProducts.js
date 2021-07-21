@@ -18,8 +18,8 @@ function TopProducts(props) {
         <div className={classes.MainProduct}>
           <FeaturedProduct
             img={dispenser}
-            title="UNDERSINK"
-            desc="Starting at Rs.10,499* | Free Maintenance 1 Year | EMI available"
+            title="RO Water Table Dispenser"
+            desc="Starting at Rs.24,499* | Free Maintenance 1 Year | EMI available"
             cat="NEW"
             catColor="blue"
             big

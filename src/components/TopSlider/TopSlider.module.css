@@ -1,5 +1,6 @@
-.TopSlider{
-    height:100vh;
-    background-color: blue;
-
+.TopSlider {
+  height: calc(100vh - 3rem);
+  background-position-x: left;
+  background-position-y:bottom ;
+  background-size: cover;
 }

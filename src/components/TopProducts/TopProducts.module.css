@@ -12,7 +12,8 @@
 .FeaturedProductsContainer {
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin:0 1rem;
+
 }
 .MainProduct {
   width: 50%;
@@ -28,6 +29,21 @@
 .SubProductsRow > div {
   width: 50%;
 }
+@media only screen and (max-width: 47em) {
+  .Title {
+    font-size:3rem;
+  }
+  .FeaturedProductsContainer {
+    flex-direction: column;
+  }
+  .MainProduct {
+    width: 100%;
+  }
+  .SubProductsList {
+    width: 100%;
+  }
+}
+
 /* div.a {
 	position:relative;
     top:20px;

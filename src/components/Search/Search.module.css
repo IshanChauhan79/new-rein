@@ -1,0 +1,61 @@
+.Search {
+  margin: 2% 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#f4f4f4;
+  /* border: 1px solid black; */
+}
+.Title{
+    font-size: 3rem;
+    font-weight: 600;
+    margin:1.5rem;
+}
+.SearchForm {
+    background-color: white;
+  border: 1px solid black;
+  border-radius: 2rem;
+  overflow: hidden;
+  width: max(40%, 30rem);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  /* justify-content: space-between; */
+}
+.SearchButton {
+  border: 0;
+  margin-right: 1.5rem;
+  background-color: white;
+
+}
+.SearchBox {
+  height: 3rem;
+  width: 80%;
+  border: 0;
+  font-size: 2rem;
+}
+.SearchBox:focus {
+  outline: none;
+  /* border: 2px dotted black; */
+}
+.KeyWordsContainer {
+  display: flex;
+  justify-content: center;
+  width: max(50%, 30rem);
+  flex-wrap: wrap;
+  padding: 1.4rem;
+}
+.KeyWordsContainer > div {
+    background-color: white;
+
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 1.4rem;
+  font-size: 1.4rem;
+}
+.KeyWordsContainer > div:hover {
+  background-color: hsl(0, 0%, 80%);
+}
