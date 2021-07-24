@@ -1,33 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 
 import classes from "./NavItem.module.css";
 import ProductDetails from "./ProductDetails";
 import SideImage from "./SideImage";
 
 function NavItem(props) {
-  const [isShow, setIsShow] = useState(false);
-  const [delayHandler, setDelayHandler] = useState(null);
 
-  const mouseEnter = (e) => {
-    setDelayHandler(
-      setTimeout(() => {
-        setIsShow(true);
-      }, 300)
-    );
-  };
-  const mouseLeave = (e) => {
-    clearTimeout(delayHandler);
-    setIsShow(false);
-  };
   return (
     <div
       className={classes.Nav}
-      onMouseLeave={(e) => mouseLeave(e)}
-      onMouseEnter={(e) => mouseEnter(e)}
+      onMouseLeave={(e) => props.mouseLeave(e)}
+      onMouseEnter={(e) => props.mouseEnter(e, props.data.title)}
     >
       <div className={classes.NavItem}>
         <div>{props.data.title}</div>
-        {isShow && (
+        {props.show === props.data.title && (
           <div className={classes.NavSlideDown}>
             <ProductDetails data={props.data} />
             <SideImage type={props.data.title} />

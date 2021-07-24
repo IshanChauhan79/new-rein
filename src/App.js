@@ -21,6 +21,8 @@ function App() {
         without prior notice. Model availability may vary from location to
         location.
       </div>
+      <div className={classes.Disclaimer}>
+      <a href="https://icons8.com/icons/set/svg" target="_blank" rel="noreferrer">Icons by Icons8</a></div>
     </div>
   );
 }
