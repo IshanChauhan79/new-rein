@@ -7,13 +7,13 @@ import products, { support } from "../../data/products";
 
 import Logo from "../Logo/Logo";
 import NavItem from "./NavItem/NavItem";
+import BarsMenu from "./BarsMenu/BarsMenu";
 
 function Header() {
   const [showDropMenu, setDropMenu] = useState(false);
   const [showBackDrop, setBackDrop] = useState(false);
   const [delayHandler, setDelayHandler] = useState(null);
 
-  const [BarBackDrop, setBarBackDrop] = useState(false);
   const [showBarsMenu, setBarsMenu] = useState(false);
 
   const barMenuClicked = () => {
@@ -115,10 +115,7 @@ function Header() {
       {showBarsMenu && (
         <div className={classes.BarsBackdrop} onClick={closeBarsMenu}></div>
       )}
-      <div
-        className={classes.BarsMenu}
-        style={{ right: showBarsMenu ? "0" : "-100%" }}
-      ></div>
+      <BarsMenu show={showBarsMenu}  closed={closeBarsMenu} />
 
       {showBackDrop && <div className={classes.Backdrop}></div>}
     </div>

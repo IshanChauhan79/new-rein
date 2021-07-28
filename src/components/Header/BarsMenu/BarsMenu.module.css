@@ -1,0 +1,53 @@
+.BarsMenu {
+  position: fixed;
+  width: 27rem;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 10;
+  overflow: hidden;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+.Close {
+  text-align: right;
+  margin-bottom: 2rem;
+  /* border: 1px solid black; */
+}
+.Menu {
+  display: felx;
+  flex-direction: column;
+}
+.MenuType {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  height: 4rem;
+  overflow: hidden;
+  color:hsl(0, 0%, 20%);
+  font-family: amiko-font;
+  transition: all 1s ease-in-out;
+}
+.MenuType:hover {
+    color:black;
+
+  font-family: amiko-bold;
+}
+.Back{
+    top:0;
+    left: 0;
+    margin: 2rem 2rem;
+    position:absolute;
+}
+.Title{
+    font-size: 2rem;
+    font-family: amiko-bold;
+    text-decoration: underline;
+
+}
