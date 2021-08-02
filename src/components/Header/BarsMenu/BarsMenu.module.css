@@ -1,6 +1,6 @@
 .BarsMenu {
   position: fixed;
-  width: 27rem;
+  width: 28rem;
   right: 0;
   top: 0;
   height: 100vh;
@@ -15,13 +15,17 @@
 .Close {
   text-align: right;
   margin-bottom: 2rem;
-  /* border: 1px solid black; */
 }
 .Menu {
-  display: felx;
-  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  padding: 2rem 2rem;
+  background-color: white;
 }
 .MenuType {
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,24 +34,22 @@
   font-size: 1.5rem;
   height: 4rem;
   overflow: hidden;
-  color:hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 20%);
   font-family: amiko-font;
   transition: all 1s ease-in-out;
 }
 .MenuType:hover {
-    color:black;
-
+  color: black;
   font-family: amiko-bold;
 }
-.Back{
-    top:0;
-    left: 0;
-    margin: 2rem 2rem;
-    position:absolute;
+.Back {
+  top: -55px;
+  left: 0;
+  margin: 2rem 2rem;
+  position: absolute;
 }
-.Title{
-    font-size: 2rem;
-    font-family: amiko-bold;
-    text-decoration: underline;
-
+.Title {
+  font-size: 2rem;
+  font-family: amiko-bold;
+  text-decoration: underline;
 }

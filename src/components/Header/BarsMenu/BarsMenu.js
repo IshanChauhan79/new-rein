@@ -1,25 +1,32 @@
 import React, { useState } from "react";
+
+import CSSTransition from "react-transition-group/CSSTransition";
+
 import close from "../../../assets/images/close.png";
 import arrowRight from "../../../assets/images/arrowRight.png";
 import arrowLeft from "../../../assets/images/arrowLeft.png";
 import arrowDown from "../../../assets/images/arrowDown.png";
+import horizontalTransition from "./horizontalTransition.module.css";
+import secondaryHorizontalTransition from "./secondaryHorizontalTransition.module.css";
 
 import products, { support } from "../../../data/products";
 
 import classes from "./BarsMenu.module.css";
 
 function BarsMenu(props) {
-  const [menuSelected, setMenuSelected] = useState(null);
+  const [menuSelected, setMenuSelected] = useState("");
+  const [sideMenu,setSideMenu]=useState("");
   const data = [...products, support];
   const closeClicked = () => {
-    setMenuSelected(null);
+    setMenuSelected("");
     props.closed();
   };
   const menuclicked = (el) => {
     setMenuSelected(el);
+    setSideMenu(el)
   };
   const backClicked = () => {
-    setMenuSelected(null);
+    setMenuSelected("");
   };
 
   console.log(menuSelected);
@@ -35,20 +42,22 @@ function BarsMenu(props) {
   ));
   let selctedMenuList = null;
   let menuSelctedElement = null;
-  if (menuSelected !== null) {
-    selctedMenuList = data[menuSelected]["types"].map((pd, i) => (
+  if (sideMenu !== "") {
+    selctedMenuList = data[sideMenu]["types"].map((pd, i) => (
       <div className={classes.MenuType} key={pd.name}>
         <div>{pd.name}</div>
         <img src={arrowDown} alt="X" height="12px"></img>
       </div>
     ));
     menuSelctedElement = (
-      <div>
+      <div  className={classes.Menu}>
         <div className={classes.Back} onClick={backClicked}>
-        <img src={arrowLeft} alt="<" height="24px" ></img>
+          <img src={arrowLeft} alt="<" height="24px"></img>
         </div>
-        <div className={classes.Title}>{data[menuSelected].title}</div>
-        {selctedMenuList}
+        <div>
+          <div className={classes.Title}>{data[sideMenu].title}</div>
+          {selctedMenuList}
+        </div>
       </div>
     );
   }
@@ -64,7 +73,26 @@ function BarsMenu(props) {
       <div className={classes.Close}>
         <img src={close} alt="X" onClick={closeClicked}></img>
       </div>
-      {menuSelected === null ? productList : menuSelctedElement}
+      <CSSTransition
+        in={menuSelected === ""}
+        mountOnEnter
+        unmountOnExit
+        timeout={500}
+        classNames={horizontalTransition}
+      >
+        {(state) => <div className={classes.Menu}>{productList}</div>}
+      </CSSTransition>
+      <CSSTransition
+        in={menuSelected !== ""}
+        mountOnEnter
+        unmountOnExit
+        timeout={500}
+        classNames={secondaryHorizontalTransition}
+      >
+        {(state) => menuSelctedElement}
+      </CSSTransition>
+
+      {/* {menuSelected === null ? productList : menuSelctedElement} */}
     </div>
   );
 }
