@@ -1,0 +1,15 @@
+.Social{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.Social >svg{
+   height:3rem;
+   width: 3rem;
+   margin:0.5rem;
+}
+@media only screen and (max-width: 47em) {
+    .Social{
+        justify-content: center;
+    }
+  }

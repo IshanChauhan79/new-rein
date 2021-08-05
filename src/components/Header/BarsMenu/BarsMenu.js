@@ -12,12 +12,12 @@ import secondaryHorizontalTransition from "./secondaryHorizontalTransition.modul
 
 import products, { support } from "../../../data/products";
 
-
 import classes from "./BarsMenu.module.css";
+import Social from "../../UI/Social/Social";
 
 function BarsMenu(props) {
   const [menuSelected, setMenuSelected] = useState("");
-  const [sideMenu,setSideMenu]=useState("");
+  const [sideMenu, setSideMenu] = useState("");
   const data = [...products, support];
   const closeClicked = () => {
     setMenuSelected("");
@@ -25,7 +25,7 @@ function BarsMenu(props) {
   };
   const menuclicked = (el) => {
     setMenuSelected(el);
-    setSideMenu(el)
+    setSideMenu(el);
   };
   const backClicked = () => {
     setMenuSelected("");
@@ -44,7 +44,7 @@ function BarsMenu(props) {
   let menuSelctedElement = null;
   if (sideMenu !== "") {
     menuSelctedElement = (
-      <div  className={classes.Menu}>
+      <div className={classes.Menu}>
         <div className={classes.Back} onClick={backClicked}>
           <img src={arrowLeft} alt="<" height="24px"></img>
         </div>
@@ -85,6 +85,10 @@ function BarsMenu(props) {
       >
         {(state) => menuSelctedElement}
       </CSSTransition>
+      <div className={classes.Social}>
+        <Social />
+
+      </div>
 
       {/* {menuSelected === null ? productList : menuSelctedElement} */}
     </div>

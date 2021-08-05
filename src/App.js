@@ -16,7 +16,7 @@ function App() {
       <TopProducts />
       <KnowMore />
       <Search />
-      
+
       <div className={classes.Disclaimer}>
         *Images shown here are for representational purpose only, actual may
         vary. All features, specifications and prices are subject to change
@@ -25,7 +25,14 @@ function App() {
       </div>
       <Footer />
       <div className={classes.Disclaimer}>
-      <a href="https://icons8.com/icons/set/svg" target="_blank" rel="noreferrer">Icons by Icons8</a></div>
+        <a
+          href="https://icons8.com/icons/set/svg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Icons by Icons8
+        </a>
+      </div>
     </div>
   );
 }

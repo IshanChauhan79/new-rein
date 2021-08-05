@@ -1,5 +1,64 @@
-.Footer{
-    width:90%;
-    /* margin: auto; */
-    margin:2rem auto;
+.Footer {
+  width: 80%;
+  margin: 3rem auto;
+}
+.Topbar {
+  display: inline-block;
+  width: 100%;
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+}
+
+.FooterTable {
+  display: flex;
+  height: 100%;
+  cursor: pointer;
+}
+.FooterTable > div {
+  padding: 3rem 1rem;
+  width: 25%;
+}
+.Title {
+  font-family: amiko-bold;
+  margin:0.8rem;
+  margin-bottom: 2rem ;
+  font-size: 1.1em;
+}
+.FooterItem {
+  font-size: 0.9em;
+  margin: 0.8rem;
+  color: hsl(0, 0%, 20%);
+}
+.FooterItem:hover {
+  font-family: amiko-med;
+  color: black;
+}
+
+.DropDown {
+  display: none;
+}
+.SocialBox {
+  border-bottom: 2px solid lightgray;
+  padding:0.5rem 3rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .DropDown {
+    display: block;
+  }
+  .FooterTable {
+    display: none;
+  }
+  .SocialBox {
+    border-top: 2px solid lightgray;
+  }
+}
+@media only screen and (max-width: 47em) {
+  .Footer {
+    width: 90%;
+  }
+  .SocialBox {
+    border-top: 2px solid lightgray;
+    padding:0.5rem 0;
+  }
 }
