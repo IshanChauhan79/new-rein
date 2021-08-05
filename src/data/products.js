@@ -40,7 +40,11 @@ const products = [
       },
       {
         name: "Comercial/Office Use",
-        cate: [],
+        cate: [
+          "REIN STORM UV",
+          "REIN STORM NF+UV",
+          "REIN STORM NF+UV+Alkaline",
+        ],
       },
       {
         name: "Industrial Use",

@@ -2,14 +2,16 @@ import React, { useState } from "react";
 
 import CSSTransition from "react-transition-group/CSSTransition";
 
+import DropDown from "../../UI/DropDown/DropDown";
+
 import close from "../../../assets/images/close.png";
 import arrowRight from "../../../assets/images/arrowRight.png";
 import arrowLeft from "../../../assets/images/arrowLeft.png";
-import arrowDown from "../../../assets/images/arrowDown.png";
 import horizontalTransition from "./horizontalTransition.module.css";
 import secondaryHorizontalTransition from "./secondaryHorizontalTransition.module.css";
 
 import products, { support } from "../../../data/products";
+
 
 import classes from "./BarsMenu.module.css";
 
@@ -29,7 +31,6 @@ function BarsMenu(props) {
     setMenuSelected("");
   };
 
-  console.log(menuSelected);
   const productList = data.map((pd, i) => (
     <div
       className={classes.MenuType}
@@ -40,15 +41,8 @@ function BarsMenu(props) {
       <img src={arrowRight} alt="X" height="12px"></img>
     </div>
   ));
-  let selctedMenuList = null;
   let menuSelctedElement = null;
   if (sideMenu !== "") {
-    selctedMenuList = data[sideMenu]["types"].map((pd, i) => (
-      <div className={classes.MenuType} key={pd.name}>
-        <div>{pd.name}</div>
-        <img src={arrowDown} alt="X" height="12px"></img>
-      </div>
-    ));
     menuSelctedElement = (
       <div  className={classes.Menu}>
         <div className={classes.Back} onClick={backClicked}>
@@ -56,7 +50,7 @@ function BarsMenu(props) {
         </div>
         <div>
           <div className={classes.Title}>{data[sideMenu].title}</div>
-          {selctedMenuList}
+          <DropDown data={data[sideMenu]["types"]} />
         </div>
       </div>
     );
