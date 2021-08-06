@@ -18,9 +18,14 @@ function Header() {
 
   const barMenuClicked = () => {
     setBarsMenu(true);
+    // const html = document.querySelector("html");
+    const body = document.querySelector("body");
+    body.style.overflow = "hidden";
   };
   const closeBarsMenu = () => {
     setBarsMenu(false);
+    const body = document.querySelector("body");
+    body.style.overflow = "auto";
   };
 
   const mouseEnterNav = (e, nav) => {
@@ -115,7 +120,7 @@ function Header() {
       {showBarsMenu && (
         <div className={classes.BarsBackdrop} onClick={closeBarsMenu}></div>
       )}
-      <BarsMenu show={showBarsMenu}  closed={closeBarsMenu} />
+      <BarsMenu show={showBarsMenu} closed={closeBarsMenu} />
 
       {showBackDrop && <div className={classes.Backdrop}></div>}
     </div>
