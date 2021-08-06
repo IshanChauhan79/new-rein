@@ -28,7 +28,7 @@ function ProductDetails(props) {
         <div
           className={classes.CategoryName}
           style={{
-            color: pc.name === showProductsList ? "black" : "grey",
+            color: pc.name === showProductsList ? "var(--clr-wb-900)" : "var(--clr-wb-400)",
             fontSize: pc.name === showProductsList ? "1.8rem" : "1.7rem",
           }}
         >
@@ -39,7 +39,7 @@ function ProductDetails(props) {
             className={classes.Arrow}
             style={{
               opacity: pc.name === showProductsList ? 1 : 0,
-              color: pc.name === showProductsList ? "black" : "grey",
+              color: pc.name === showProductsList ? "var(--clr-wb-900)" : "var(--clr-wb-400)",
             }}
           >
             <img src={arrow} alt=">"></img>
@@ -60,51 +60,3 @@ function ProductDetails(props) {
 }
 
 export default ProductDetails;
-
-/* <div
-          className={classes.Category}
-          onMouseEnter={(e) => mouseEnterProduct(e, "Mobile")}
-          // onMouseLeave={(e) => mouseLeaveProduct(e)}
-        >
-          <div className={classes.CategoryName}>product category</div>
-          <div className={classes.Arrow}>&gt;</div>
-          {ProductLists}
-        </div>
-        <div
-          className={classes.Category}
-          onMouseEnter={(e) => mouseEnterProduct(e, "RO")}
-          // onMouseLeave={(e) => mouseLeaveProduct(e)}
-        >
-          <div className={classes.CategoryName}>product category</div>
-          <div className={classes.Arrow}>&gt;</div>
-          {ProductLists}
-        </div>
-        <div
-          className={classes.Category}
-          onMouseEnter={(e) => mouseEnterProduct(e, "Pc")}
-          // onMouseLeave={(e) => mouseLeaveProduct(e)}
-        >
-          <div className={classes.CategoryName}>product category</div>
-          <div className={classes.Arrow}>&gt;</div>
-          {ProductLists}
-        </div>
-        <div className={classes.Category}>
-          <div className={classes.CategoryName}>product category</div>
-          <div className={classes.Arrow}>&gt;</div>
-        //   {/* <div>sub category product</div> */
-// </div>
-// <div className={classes.Category}>
-//   <div className={classes.CategoryName}>product category</div>
-//   <div className={classes.Arrow}>&gt;</div>
-//   {/* <div>sub category product</div> */}
-// </div>
-// <div className={classes.Category}>
-//   <div className={classes.CategoryName}>product category</div>
-//   <div className={classes.Arrow}>&gt;</div>
-//   {/* <div>sub category product</div> */}
-// </div>
-// <div className={classes.Category}>
-//   <div className={classes.CategoryName}>product category</div>
-//   <div className={classes.Arrow}>&gt;</div>
-//   {/* <div>sub category product</div> */}
-// </div> */}

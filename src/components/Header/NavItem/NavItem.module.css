@@ -5,10 +5,11 @@
   padding-bottom: 0.2em;
 }
 .NavItem {
+  height: 100%;
   cursor: pointer;
   font-family: amiko-med;
   font-size: 1.4rem;
-  color: black;
+  color: var(--clr-wb-900);
   padding: 0 0.7em;
   margin: 0 0.1em;
   border-radius: 1.3em;
@@ -24,8 +25,8 @@
   padding-top: 0.2em;
 }
 .NavItem:hover {
-  color: white;
-  background-color: black;
+  color: var(--clr-wb-100);
+  background-color: var(--clr-wb-900);
 }
 .NavSlideDown {
   position: absolute;
@@ -35,16 +36,12 @@
   width: 100%;
   left: 0;
   right: 0;
-  top: 5.5rem;
+  top: 5.2rem;
   height: 70vh;
   max-height: 70vh;
   z-index: 30;
   overflow: hidden;
   background-color: invisible;
-  color: black;
+  color: var(--clr-wb-900);
   overflow: auto;
-  /* transition: all 0.3s ease-in-out; */
-
-  /* min-height: 400px; */
 }
-

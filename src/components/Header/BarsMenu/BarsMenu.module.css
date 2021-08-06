@@ -6,7 +6,7 @@
   bottom: 0;
   z-index: 10;
   overflow: hidden;
-  background-color: white;
+  background-color: var(--clr-wb-100);
   transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   padding: 2rem 2rem;
-  background-color: white;
+  background-color: var(--clr-wb-100);
 }
 .MenuType {
   /* border: 1px solid black; */
@@ -34,12 +34,12 @@
   font-size: 1.5rem;
   height: 4rem;
   overflow: hidden;
-  color: hsl(0, 0%, 20%);
+  color: var(--clr-wb-700);
   font-family: amiko-font;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .MenuType:hover {
-  color: black;
+  color: var(--clr-wb-900);
   font-family: amiko-bold;
 }
 .Back {
@@ -51,7 +51,6 @@
 .Title {
   font-size: 2rem;
   font-family: amiko-bold;
-  /* text-decoration: underline; */
 }
 .Social{
   position:absolute;
@@ -61,5 +60,4 @@
   display: flex;
   justify-content: center;
   margin:1rem;
-  /* width: 100%; */
 }

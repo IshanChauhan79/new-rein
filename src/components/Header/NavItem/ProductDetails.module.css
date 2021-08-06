@@ -1,5 +1,4 @@
 .ProductDetails {
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   padding: 0 1em;
@@ -12,14 +11,13 @@
 }
 .Title {
   font-size: 3rem !important;
-  /* text-decoration: underline; */
   margin-bottom: 1rem;
 }
 .Category{
     position: relative;
 }
 .CategoryName {
-  color: grey;
+  color: var(--clr-wb-900);
   transition: all 0.3s ease-in-out;
   position: relative;
   font-size: 1.7rem;

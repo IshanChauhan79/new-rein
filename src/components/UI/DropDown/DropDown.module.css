@@ -7,7 +7,7 @@
   flex-direction: column;
   margin: 1rem 0;
   font-size: 1.5rem;
-  color: hsl(0, 0%, 20%);
+  color: var(--clr-wb-700);
   font-family: amiko-font;
   transition: all 1s ease-in-out;
 }
@@ -29,7 +29,7 @@
   overflow: hidden;
 }
 .DropMenu {
-  border-bottom: 2px solid lightgray;
+  border-bottom: 2px solid var(--clr-wb-300);
   display: flex;
   width: 100%;
   display: flex;

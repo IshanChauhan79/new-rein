@@ -1,34 +1,33 @@
 .Search {
   margin: 2% 0;
+  margin-bottom: 3%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color:#f4f4f4;
+  background-color: var(--background-gray);
   /* border: 1px solid black; */
 }
-.Title{
-    font-size: 3rem;
-    font-weight: 600;
-    margin:1.5rem;
+.Title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1.5rem;
 }
 .SearchForm {
-    background-color: white;
-  border: 1px solid black;
+  background-color: var(--clr-wb-100);
+  border: 1px solid var(--clr-wb-900);
   border-radius: 2rem;
   overflow: hidden;
   width: max(40%, 30rem);
   display: flex;
   align-items: center;
   padding: 0.5rem 1.5rem;
-  /* justify-content: space-between; */
 }
 .SearchButton {
   border: 0;
   margin-right: 1.5rem;
-  background-color: white;
-
+  background-color: var(--clr-wb-100);
 }
 .SearchBox {
   height: 3rem;
@@ -38,24 +37,32 @@
 }
 .SearchBox:focus {
   outline: none;
-  /* border: 2px dotted black; */
 }
 .KeyWordsContainer {
   display: flex;
   justify-content: center;
-  width: max(50%, 30rem);
+  width: max(60%, 40rem);
+  max-width: 90%;
   flex-wrap: wrap;
   padding: 1.4rem;
 }
 .KeyWordsContainer > div {
-    background-color: white;
+  background-color: var(--clr-wb-100);
 
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid hsl(0, 0%, 80%);
+  border: 1px solid var(--clr-wb-200);
   border-radius: 1.4rem;
   font-size: 1.4rem;
 }
 .KeyWordsContainer > div:hover {
-  background-color: hsl(0, 0%, 80%);
+  background-color: var(--background-gray);
+}
+
+@media only screen and (max-width: 47em) {
+  .Title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
 }

@@ -4,13 +4,13 @@ import classes from "./Search.module.css";
 
 function Search() {
   const keysWords = [
-    "accccca",
-    "ssccccs",
-    "saccasa",
-    "asaccsdf",
-    "asccasf",
-    "ffffffff",
-    "asccfas"
+    "counter",
+    "UNDERSHINK UV",
+    "RO",
+    "STORM UV",
+    "Alkaline",
+    "RO+UV",
+    "RO+UV+Alkaline"
   ];
   const keyList = keysWords.map((el) => <div key={el}>{el}</div>);
   const submitSearch =(event)=>{

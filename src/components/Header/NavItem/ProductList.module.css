@@ -6,15 +6,14 @@
 }
 .SubCategory {
   padding: 1.4rem 0;
-  color: grey;
+  color: var(--clr-wb-400);
   transition: all 0.3s ease-in-out;
   position: relative;
   font-size: 1.5rem;
-  
 }
 
 .SubCategory:hover {
   font-size: 1.6rem;
-  color: black;
+  color: var(--clr-wb-900);
   text-decoration: underline;
 }

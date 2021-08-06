@@ -6,7 +6,7 @@
   padding: 5% 4%;
   padding-bottom: 0;
   position: relative;
-  background-color: #f4f4f4;
+  background-color: var(--background-gray);
 
   /* height: 200px; */
   /* background-color: lightgray; */
@@ -17,7 +17,7 @@
   font-family: amiko-med;
   top: 2rem;
   left: 2rem;
-  color: white;
+  color: var(--clr-wb-100);
   border-radius: 1.6rem;
   padding: 4px 6px;
   padding-top: 6px;
@@ -29,10 +29,10 @@
   font-family: amiko-med;
   top: 1rem;
   left: 1rem;
-  color: white;
+  color: var(--clr-wb-100);
   border-radius: 1.4rem;
   padding: 3px 5px;
-  padding-top: 4px;
+  padding-top: 5px;
 }
 .Img {
   /* border: 1px solid black; */
@@ -56,7 +56,7 @@
 .Underline {
   margin: auto;
   width: 60%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--clr-wb-900);
 }
 .DescBig {
   font-size: 1.6rem !important;
@@ -84,8 +84,8 @@
 }
 .Buy {
   display: inline-block;
-  background-color: black;
-  color: white;
+  background-color: var(--clr-wb-900);
+  color: var(--clr-wb-100);
   font-family: amiko-med;
   font-size: 1.2rem;
   padding: 1rem 1rem;
@@ -106,77 +106,15 @@
   transform: rotateX(0deg) translateY(-100%);
 }
 .Buy:hover {
-  background-color: darkgray;
+  background-color: var(--clr-wb-700);
 }
-
-/* -webkit-transform: rotate(20deg), translateY(0);
-  -ms-transform: rotate(20deg), translateY(0);
-  transform: rotateX(0deg), translateY(0); */
-
-/* div.a {
-	position:relative;
-  top:20px;
-  width: 150px;
-  height: 80px;
-  opacity:0;
-  transform: rotateX(-60deg);
-  -ms-transform: rotate(20deg); 
-  
-  transition: all 0.5s ease-in-out
+@media only screen and (max-width: 31em) {
+  .Cat {
+    font-size: 0.9rem;
+    border-radius: 0.8rem;
+    padding: 2px 5px;
+    padding-top: 4px;
+    top: 0.8rem;
+    left: 0.8rem;
+  }
 }
-div.a:hover {
-top:0;
-opacity:1;
-
-  -ms-transform: rotate(20deg); 
-  transform: rotateX(0deg);
-} */
-
-/* 
-
-div.a {
-    border:1px solid black;
-        position:absolute;
-        height:50px;
-        top:60px; 
-      width: 150px;
-      -ms-transform: rotate(20deg); 
-      transform: rotateX(0deg);
-      opacity:1;
-      
-      
-      transition: all 0.5s ease-in-out
-    }
-    body:hover div.a {
-    
-    top:10px;
-    
-    
-    opacity:0;
-      transform: rotateX(-60deg);
-      -ms-transform: rotate(20deg); 
-    
-      
-    }
-    
-    div.b {
-    border:1px solid black;
-    height:50px;
-      position:absolute;
-        width: 150px;
-      top:110px;
-    opacity:0;
-      transform: rotateX(-60deg);
-      -ms-transform: rotate(20deg); 
-      transition: all 0.5s ease-in-out
-       
-    }
-    body:hover div.b {
-     top:60px; 
-      -ms-transform: rotate(20deg); 
-      transform: rotateX(0deg);
-      opacity:1;
-    
-    
-      
-    } */
