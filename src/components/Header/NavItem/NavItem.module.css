@@ -24,7 +24,9 @@
 .NavItem > div {
   padding-top: 0.2em;
 }
-.NavItem:hover {
+.NavItem:hover,
+.NavItem:active,
+.NavItem:focus {
   color: var(--clr-wb-100);
   background-color: var(--clr-wb-900);
 }

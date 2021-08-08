@@ -36,7 +36,9 @@
   transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
-.FeaturedProduct:hover .Img {
+.FeaturedProduct:hover .Img,
+.FeaturedProduct:active .Img,
+.FeaturedProduct:focus .Img {
   transform: scale(1.05);
 }
 .TitleBig {
@@ -73,7 +75,9 @@
   transform: rotateX(0deg) translateY(0);
   transition: all 0.3s ease-in-out;
 }
-.FeaturedProduct:hover .Desc {
+.FeaturedProduct:hover .Desc,
+.FeaturedProduct:active .Desc,
+.FeaturedProduct:focus .Desc {
   opacity: 0;
   -webkit-transform: rotateX(-60deg) translateY(-120%);
   -ms-transform: rotateX(-60deg) translateY(-120%);
@@ -96,13 +100,17 @@
   transform: rotateX(30deg) translateY(0);
   transition: all 0.3s ease-in-out;
 }
-.FeaturedProduct:hover .Buy {
+.FeaturedProduct:hover .Buy,
+.FeaturedProduct:active .Buy,
+.FeaturedProduct:focus .Buy {
   opacity: 1;
   -webkit-transform: rotateX(0deg) translateY(-100%);
   -ms-transform: rotateX(0deg) translateY(-100%);
   transform: rotateX(0deg) translateY(-100%);
 }
-.Buy:hover {
+.Buy:hover,
+.Buy:active,
+.Buy:focus {
   background-color: var(--clr-wb-700);
 }
 @media only screen and (max-width: 31em) {

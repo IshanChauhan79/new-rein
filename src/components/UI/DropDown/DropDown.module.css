@@ -19,7 +19,9 @@
   align-items: center;
   line-height: 4rem;
 }
-.MenuName:hover {
+.MenuName:hover,
+.MenuName:active,
+.MenuName:focus {
   font-family: amiko-bold !important;
 }
 .MenuName img {
@@ -40,6 +42,8 @@
   padding: 1rem 0.5rem;
   font-size: 0.8em;
 }
-.DropMenu > div:hover {
+.DropMenu > div:hover,
+.DropMenu > div:active,
+.DropMenu > div:focus {
   font-family: amiko-bold !important;
 }

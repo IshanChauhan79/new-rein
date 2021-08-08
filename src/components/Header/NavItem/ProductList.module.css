@@ -12,7 +12,9 @@
   font-size: 1.5rem;
 }
 
-.SubCategory:hover {
+.SubCategory:hover,
+.SubCategory:active,
+.SubCategory:focus {
   font-size: 1.6rem;
   color: var(--clr-wb-900);
   text-decoration: underline;

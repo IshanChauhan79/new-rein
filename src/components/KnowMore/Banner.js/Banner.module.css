@@ -62,7 +62,9 @@
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
-.KnowButton:hover {
+.KnowButton:hover,
+.KnowButton:active,
+.KnowButton:focus {
   background-color: var(--clr-wb-700);
 }
 .BottomText {

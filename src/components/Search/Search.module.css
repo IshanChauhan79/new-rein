@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   background-color: var(--background-gray);
-
 }
 .Title {
   font-size: 3rem;
@@ -55,7 +54,9 @@
   border-radius: 1.4rem;
   font-size: 1.4rem;
 }
-.KeyWordsContainer > div:hover {
+.KeyWordsContainer > div:hover,
+.KeyWordsContainer > div:active,
+.KeyWordsContainer > div:focus {
   background-color: var(--background-gray);
 }
 
@@ -64,5 +65,4 @@
     font-size: 2.5rem;
     text-align: center;
   }
-  
 }

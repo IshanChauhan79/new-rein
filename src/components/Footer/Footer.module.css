@@ -29,7 +29,9 @@
   color: var(--clr-wb-700);
   cursor: pointer;
 }
-.FooterItem:hover {
+.FooterItem:hover,
+FooterItem:active,
+FooterItem:focus {
   font-family: amiko-med;
   color: var(--clr-wb-900);
 }
