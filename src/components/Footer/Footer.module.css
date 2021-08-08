@@ -5,14 +5,13 @@
 .Topbar {
   display: inline-block;
   width: 100%;
-  border-top: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
+  border-top: 2px solid var(--clr-wb-200);
+  border-bottom: 2px solid var(--clr-wb-200);
 }
 
 .FooterTable {
   display: flex;
   height: 100%;
-  cursor: pointer;
 }
 .FooterTable > div {
   padding: 3rem 1rem;
@@ -20,37 +19,42 @@
 }
 .Title {
   font-family: amiko-bold;
-  margin:0.8rem;
-  margin-bottom: 2rem ;
+  margin: 0.8rem;
+  margin-bottom: 2rem;
   font-size: 1.1em;
 }
 .FooterItem {
   font-size: 0.9em;
   margin: 0.8rem;
-  color: hsl(0, 0%, 20%);
+  color: var(--clr-wb-700);
+  cursor: pointer;
 }
 .FooterItem:hover {
   font-family: amiko-med;
-  color: black;
+  color: var(--clr-wb-900);
 }
 
 .DropDown {
   display: none;
 }
 .SocialBox {
-  border-bottom: 2px solid lightgray;
-  padding:0.5rem 3rem;
+  border-bottom: 2px solid var(--clr-wb-200);
+  padding: 0.5rem 3rem;
 }
 
 @media only screen and (max-width: 62.5em) {
   .DropDown {
     display: block;
   }
+  .Topbar {
+    border: 0;
+    border-bottom: 4px solid var(--clr-wb-200);
+  }
   .FooterTable {
     display: none;
   }
   .SocialBox {
-    border-top: 2px solid lightgray;
+    border-top: 2px solid lvar(--clr-wb-200);
   }
 }
 @media only screen and (max-width: 47em) {
@@ -58,7 +62,7 @@
     width: 90%;
   }
   .SocialBox {
-    border-top: 2px solid lightgray;
-    padding:0.5rem 0;
+    border-top: 2px solid var(--clr-wb-200);
+    padding: 0.5rem 0;
   }
 }

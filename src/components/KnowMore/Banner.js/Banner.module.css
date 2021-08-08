@@ -2,9 +2,11 @@
   display: flex;
   margin: 2rem 1rem;
   position: relative;
-  box-shadow: 0px 0px 1.5rem 0.7rem hsl(0, 0%, 70%);
-
 }
+.BannerShadow {
+  box-shadow: var(--shadow);
+}
+
 .RightAl {
   flex-direction: row-reverse;
   /* text-align: right; */
@@ -19,6 +21,10 @@
   background-size: 100% 100%;
   padding: 2rem 3rem;
 }
+.BannerHalf {
+  margin: 0rem 0.5rem !important;
+  box-shadow: 0px 0px 1.5rem 0.7rem var(--shadow);
+}
 .Title {
   font-size: 2.2rem;
   font-weight: 600;
@@ -27,25 +33,26 @@
 
 .Underline {
   width: 50%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--clr-wb-900);
   margin: 0.5rem;
 }
-.Product{
-    position:absolute;
-    min-width: 17rem;
-    width: 40%;
-    right: 0;
-    top:50%;
-    transform: translateY(-50%);
+.Product {
+  position: absolute;
+  min-width: 17rem;
+  width: 40%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .KnowButton {
   padding: 0.8rem 1rem;
   padding-bottom: 0.7rem;
-  background-color: black;
-  color: white;
+  background-color: var(--clr-wb-900);
+  color: var(--clr-wb-100);
   display: inline-block;
   border-radius: 2rem;
   margin: 3rem 1rem;
+  cursor: pointer;
 }
 
 .BannerImage {
@@ -56,11 +63,11 @@
   background-position: center !important;
 }
 .KnowButton:hover {
-  background-color: gray;
+  background-color: var(--clr-wb-700);
 }
 .BottomText {
   font-size: 1.3rem;
-  color: gray;
+  color: var(--clr-wb-400);
   position: absolute;
   bottom: 20%;
   margin: auto;
@@ -80,7 +87,7 @@
   font-size: 2rem;
   font-weight: 600;
   margin: 0.6rem;
-  color: gray;
+  color: var(--clr-wb-400);
 }
 
 @media only screen and (max-width: 47em) {
@@ -90,6 +97,25 @@
   }
   .Banner > div {
     width: 100%;
-    margin: 0 !important;
+    margin: 0;
+    min-height: 32rem;
+  }
+  .BannerHalf {
+    margin: 3rem 0 !important;
+    box-shadow: var(--shadow);
+  }
+
+  .Title {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 90%;
+  }
+  .BottomText {
+    bottom: 15%;
+  }
+}
+@media only screen and (max-width: 35em) {
+  .Title {
+    width: 100%;
   }
 }

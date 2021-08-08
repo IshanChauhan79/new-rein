@@ -10,6 +10,7 @@
   color: var(--clr-wb-700);
   font-family: amiko-font;
   transition: all 1s ease-in-out;
+  cursor: pointer;
 }
 .MenuName {
   display: flex;

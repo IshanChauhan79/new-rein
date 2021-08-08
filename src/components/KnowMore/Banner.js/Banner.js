@@ -8,6 +8,7 @@ function Banner(props) {
       <div
         className={[
           classes.Banner,
+          classes.BannerShadow,
           props.data.rightAligned ? classes.RightAl : null,
         ].join(" ")}
       >
@@ -42,9 +43,9 @@ function Banner(props) {
     return (
       <div className={classes.Banner}>
         <div
+          className={classes.BannerHalf}
           style={{
             backgroundImage: `url(${props.data.bg1})`,
-            margin: "0rem 1rem",
           }}
         >
           <div className={classes.Title}>{props.data.title1}</div>
@@ -66,9 +67,9 @@ function Banner(props) {
           ) : null}
         </div>
         <div
+          className={classes.BannerHalf}
           style={{
             backgroundImage: `url(${props.data.bg2})`,
-            margin: "0rem 1rem",
           }}
         >
           <div className={classes.Title}>{props.data.title2}</div>
