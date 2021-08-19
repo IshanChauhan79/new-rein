@@ -1,6 +1,7 @@
 .TopSlider {
-  height: calc(100vh - 3rem);
-  background-position-x: left;
+  max-height: calc(100vh - 3rem);
+  width: 100%;
+  /* background-position-x: left;
   background-position-y:bottom ;
-  background-size: cover;
+  background-size: cover; */
 }
