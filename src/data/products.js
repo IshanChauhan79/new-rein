@@ -11,6 +11,7 @@ export const support = {
 const products = [
   {
     title: "Water Purifiers",
+    id: "water-purifiers",
     types: [
       {
         name: "Under the counter",
@@ -58,6 +59,8 @@ const products = [
   },
   {
     title: "Water Softener",
+    id: "water-softener",
+
     types: [
       {
         name: "Portable Softener",
@@ -82,6 +85,7 @@ const products = [
   },
   {
     title: "Water Heaters",
+    id: "water-heaters",
     types: [
       {
         name: "Electric Storage",
@@ -95,6 +99,7 @@ const products = [
   },
   {
     title: "Air Purifiers",
+    id: "water-purifiers",
     types: [
       {
         name: "Abc",
@@ -108,6 +113,8 @@ const products = [
   },
   {
     title: "Home Appliances",
+    id: "home-appliances",
+
     types: [
       {
         name: "Mixer Blender",

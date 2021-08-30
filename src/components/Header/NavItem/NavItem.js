@@ -3,9 +3,9 @@ import React from "react";
 import classes from "./NavItem.module.css";
 import ProductDetails from "./ProductDetails";
 import SideImage from "./SideImage";
+import { Link } from "react-router-dom";
 
 function NavItem(props) {
-
   return (
     <div
       className={classes.Nav}
@@ -13,7 +13,14 @@ function NavItem(props) {
       onMouseEnter={(e) => props.mouseEnter(e, props.data.title)}
     >
       <div className={classes.NavItem}>
-        <div>{props.data.title}</div>
+        {props.data.id ? (
+          <Link to={"/products/" + props.data.id}>
+            <div>{props.data.title}</div>
+          </Link>
+        ) : (
+          <div>{props.data.title}</div>
+        )}
+
         {props.show === props.data.title && (
           <div className={classes.NavSlideDown}>
             <ProductDetails data={props.data} />

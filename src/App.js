@@ -1,4 +1,6 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+
 import TopProducts from "./components/TopProducts/TopProducts";
 import TopSlider from "./components/TopSlider/TopSlider";
 
@@ -7,15 +9,27 @@ import Header from "./components/Header/Header";
 import KnowMore from "./components/KnowMore/KnowMore";
 import Search from "./components/Search/Search";
 import Footer from "./components/Footer/Footer";
+import ProductsPage from "./components/ProductsPage/ProductsPage";
 
 function App() {
   return (
     <div className={classes.App}>
       <Header />
-      <TopSlider />
-      <TopProducts />
-      <KnowMore />
-      <Search />
+      <Switch>
+        <Route path="/" exact>
+          <TopSlider />
+          <TopProducts />
+          <KnowMore />
+          <Search />
+        </Route>
+        <Route path="/products/:name" exact>
+          <TopSlider />
+          <ProductsPage />
+        </Route>
+        <Route path="/">
+          <div className={classes.NotFound}>404 Page not Found</div>
+        </Route>
+      </Switch>
 
       <div className={classes.Disclaimer}>
         *Images shown here are for representational purpose only, actual may

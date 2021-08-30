@@ -24,12 +24,22 @@
 .NavItem > div {
   padding-top: 0.2em;
 }
+.NavItem a {
+  color: var(--clr-wb-900);
+  text-decoration: none;
+}
+.NavItem a:hover,
+.NavItem:hover>a {
+  color: var(--clr-wb-100);
+  text-decoration: none;
+}
 .NavItem:hover,
 .NavItem:active,
 .NavItem:focus {
   color: var(--clr-wb-100);
   background-color: var(--clr-wb-900);
 }
+
 .NavSlideDown {
   position: absolute;
   display: flex;

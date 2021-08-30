@@ -3,6 +3,10 @@
   flex-direction: column;
   padding: 0 1em;
 }
+.ProductDetails a:hover {
+  color: var(--clr-wb-900);
+  text-decoration: none;
+}
 .ProductContainer {
   position: relative;
 }
@@ -13,8 +17,8 @@
   font-size: 3rem !important;
   margin-bottom: 1rem;
 }
-.Category{
-    position: relative;
+.Category {
+  position: relative;
 }
 .CategoryName {
   color: var(--clr-wb-900);
@@ -33,6 +37,6 @@
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
-.Arrow img{
-  height:2rem;
+.Arrow img {
+  height: 2rem;
 }

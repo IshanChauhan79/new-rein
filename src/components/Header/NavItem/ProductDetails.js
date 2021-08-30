@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import arrow from "../../../assets/images/arrowRight.png";
 import ProductList from "./ProductList.js";
+import { Link } from "react-router-dom";
 
 import classes from "./ProductDetails.module.css";
 
@@ -28,7 +29,10 @@ function ProductDetails(props) {
         <div
           className={classes.CategoryName}
           style={{
-            color: pc.name === showProductsList ? "var(--clr-wb-900)" : "var(--clr-wb-400)",
+            color:
+              pc.name === showProductsList
+                ? "var(--clr-wb-900)"
+                : "var(--clr-wb-400)",
             fontSize: pc.name === showProductsList ? "1.8rem" : "1.7rem",
           }}
         >
@@ -39,7 +43,10 @@ function ProductDetails(props) {
             className={classes.Arrow}
             style={{
               opacity: pc.name === showProductsList ? 1 : 0,
-              color: pc.name === showProductsList ? "var(--clr-wb-900)" : "var(--clr-wb-400)",
+              color:
+                pc.name === showProductsList
+                  ? "var(--clr-wb-900)"
+                  : "var(--clr-wb-400)",
             }}
           >
             <img src={arrow} alt=">"></img>
@@ -50,7 +57,14 @@ function ProductDetails(props) {
   });
   return (
     <div className={classes.ProductDetails}>
-      <div className={classes.Title}>{props.data.title}</div>
+      {props.data.id ? (
+        <Link to={"/products/" + props.data.id}>
+          <div className={classes.Title}>{props.data.title}</div>
+        </Link>
+      ) : (
+        <div className={classes.Title}>{props.data.title}</div>
+      )}
+
       <div className={classes.ProductContainer}>
         {ProductCategoryList}
         {ProductLists}
