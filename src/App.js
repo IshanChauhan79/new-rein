@@ -23,7 +23,7 @@ function App() {
           <Search />
         </Route>
         <Route path="/products/:name" exact>
-          <TopSlider />
+          {/* <TopSlider /> */}
           <ProductsPage />
         </Route>
         <Route path="/">
