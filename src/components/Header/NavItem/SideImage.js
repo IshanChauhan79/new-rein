@@ -1,12 +1,12 @@
 import React from "react";
 
 import classes from "./SideImage.module.css";
-import Nav1 from "../../../assets/images/nav/1.png";
-import Nav2 from "../../../assets/images/nav/2.png";
-import Nav3 from "../../../assets/images/nav/3.png";
-import Nav4 from "../../../assets/images/nav/4.png";
-import Nav5 from "../../../assets/images/nav/5.png";
-import Nav6 from "../../../assets/images/nav/6.png";
+import Nav1 from "../../../assets/images/nav/1.jpg";
+import Nav2 from "../../../assets/images/nav/2.jpg";
+import Nav3 from "../../../assets/images/nav/3.jpg";
+import Nav4 from "../../../assets/images/nav/4.jpg";
+import Nav5 from "../../../assets/images/nav/5.jpg";
+import Nav6 from "../../../assets/images/nav/6.jpg";
 
 function SideImage(props) {
   var image = null;

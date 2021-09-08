@@ -1,9 +1,9 @@
 import img from "../assets/images/design/background.jpg";
 import p1 from "../assets/images/design/p1.png";
 import p2 from "../assets/images/design/p2.png";
-import banner1 from "../assets/images/design/banner1.png";
-import banner2 from "../assets/images/design/banner2.png";
-import banner3 from "../assets/images/design/banner3.png";
+import banner1 from "../assets/images/design/banner1.jpg";
+import banner2 from "../assets/images/design/banner2.jpg";
+import banner3 from "../assets/images/design/banner3.jpg";
 import ion from "../assets/images/design/ion.png";
 import hotCold from "../assets/images/design/hotCold.png";
 

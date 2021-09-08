@@ -1,11 +1,11 @@
 import React from "react";
 import classes from "./TopProducts.module.css";
 import FeaturedProduct from "./FeaturedProduct/FeaturedProduct";
-import dispenser from "../../assets/images/products/commercial.png";
-import undersink from "../../assets/images/products/undersink.png";
-import softener from "../../assets/images/products/softener.png";
-import plant from "../../assets/images/products/plant.png";
-import storm from "../../assets/images/products/storm.png";
+import dispenser from "../../assets/images/products/commercial.jpg";
+import undersink from "../../assets/images/products/undersink.jpg";
+import softener from "../../assets/images/products/softener.jpg";
+import plant from "../../assets/images/products/plant.jpg";
+import storm from "../../assets/images/products/storm.jpg";
 
 
 
