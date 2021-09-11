@@ -6,7 +6,7 @@ import DropDown from "../UI/DropDown/DropDown";
 import Social from "../UI/Social/Social";
 
 function Footer() {
-  console.log(data);
+  // console.log(data);
   const footerTable = data.map((el, i) => {
     const listItem = el.cate.map((li) => (
       <div className={classes.FooterItem} key={li}>

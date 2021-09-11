@@ -14,7 +14,7 @@ function NavItem(props) {
     >
       <div className={classes.NavItem}>
         {props.data.id ? (
-          <Link to={"/products/" + props.data.id}>
+          <Link to={"/products/" + props.data.route}>
             <div>{props.data.title}</div>
           </Link>
         ) : (

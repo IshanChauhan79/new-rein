@@ -1,25 +1,46 @@
 .ProductsPage {
+  background-color: #f4f4f4;
+}
+.DisplayProducts {
   height: 27rem;
   background-color: #f4f4f4;
   padding-top: 5rem;
+  position: relative;
 }
 .BgImage {
   width: 100%;
-  min-height: 90vh;
+  height: 80vh;
+  margin: auto;
+  box-shadow: 0 0 2rem 1rem gray;
   background-position: left;
   background-size: cover;
 }
+
 .Products {
   position: relative;
+  /* margin: 6rem 0rem; */
+  margin: 9rem  6rem;
+
 }
+.Image {
+  width: 100%;
+  height: 80vh;
+  margin: auto;
+  box-shadow: 0 0 2rem 1rem gray;
+}
+
 .ProductContainer {
   position: absolute;
   background-color: white;
-  height: 90%;
-  top: 5%;
+  height: calc(100% + 4rem);
+  top: -2rem;
   right: 5%;
   width: 32rem;
   padding: 2rem;
+  padding-top: 0;
+  border-radius: 1rem;
+  /* box-shadow: 0rem 1rem 2rem 0rem gray,0rem -1rem 2rem 0rem gray; */
+
   /* max-width: 35rem; */
 }
 .CatBig {
@@ -39,11 +60,19 @@
   right: 2rem;
   color: var(--clr-wb-700);
 }
+.ProductImg {
+  display: flex;
+  justify-content: center;
+}
+.ProductImg > img {
+  width: 70%;
+  margin: auto;
+}
 .Color {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: gray;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 .Color > div {
   display: flex;
@@ -52,8 +81,8 @@
 }
 .Color > div > div {
   position: relative;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
   border: 3px solid lightgray;
   margin: 0.3rem;
@@ -65,26 +94,47 @@
   border: 3px solid white;
 }
 .Color > div > div > div {
-  height: 2rem;
-  width: 2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   border-radius: 50%;
   /* border: 4px solid lightgray; */
 }
 .Variants {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: gray;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 .Variants > div {
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 .Variants > div > div {
   position: relative;
-  padding: 0.3rem;
+  padding: 0.2rem 0.3rem;
   border: 3px solid lightgray;
-  margin: 0.3rem;
+  margin: 0.2rem;
+}
+.Desc {
+  font-size: 1.6rem;
+  font-family: amiko-med;
+  margin-top: 0.6rem;
+}
+.Notes {
+  margin-left: -1rem;
+  font-size: 1.4rem;
+}
+.LearnMore {
+  width: 100%;
+  margin: auto;
+  font-size: 1.7rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  /* border: 1px solid black; */
+  border-radius: 1.6rem;
+  padding: 0.5rem 0;
+  box-shadow: 0 0 1rem 0rem gray;
 }

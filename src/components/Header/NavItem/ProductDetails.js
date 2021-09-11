@@ -58,7 +58,7 @@ function ProductDetails(props) {
   return (
     <div className={classes.ProductDetails}>
       {props.data.id ? (
-        <Link to={"/products/" + props.data.id}>
+        <Link to={"/products/" + props.data.route}>
           <div className={classes.Title}>{props.data.title}</div>
         </Link>
       ) : (

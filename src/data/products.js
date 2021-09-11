@@ -11,7 +11,99 @@ export const support = {
 const products = [
   {
     title: "Water Purifiers",
+    route: "water-purifiers",
     id: "water-purifiers",
+    product: [
+      {
+        name: "Under the counter",
+        img: "",
+        types: [
+          "RO",
+          "RO+UV",
+          "RO+UV+NF",
+          "RO+UV+Alkaline",
+          "RO+UV+Copper",
+          "NF+UV+Alkaline",
+          "NF+UV+Copper",
+        ],
+        points: [
+          "100 % Pure Water",
+          "Space Saver Design",
+          "Multi Stage Purification",
+          "Retains Essential Minerals",
+          "Automatic Power",
+          "Saves Electricity",
+        ],
+        sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
+      },
+      {
+        name: "Wall Mountable",
+        img: "",
+        types: [
+          "RO",
+          "RO+UV",
+          "RO+UV+NF",
+          "RO+UV+Alkaline",
+          "RO+UV+Copper",
+          "NF+UV+Alkaline",
+          "NF+UV+Copper",
+        ],
+        points: [
+          "100 % Pure Water",
+          "Space Saver Design",
+          "Multi Stage Purification",
+          "Retains Essential Minerals",
+          "Automatic Power",
+          "Saves Electricity",
+        ],
+        sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
+      },
+      {
+        name: "Comercial/Office Use",
+        img: "",
+        types: [
+          "RO",
+          "RO+UV",
+          "RO+UV+NF",
+          "RO+UV+Alkaline",
+          "RO+UV+Copper",
+          "NF+UV+Alkaline",
+          "NF+UV+Copper",
+        ],
+        points: [
+          "100 % Pure Water",
+          "Space Saver Design",
+          "Multi Stage Purification",
+          "Retains Essential Minerals",
+          "Automatic Power",
+          "Saves Electricity",
+        ],
+        sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
+      },
+      
+      {
+        name: "Industrial Use",
+        img: "",
+        types: [
+          "RO",
+          "RO+UV",
+          "RO+UV+NF",
+          "RO+UV+Alkaline",
+          "RO+UV+Copper",
+          "NF+UV+Alkaline",
+          "NF+UV+Copper",
+        ],
+        points: [
+          "100 % Pure Water",
+          "Space Saver Design",
+          "Multi Stage Purification",
+          "Retains Essential Minerals",
+          "Automatic Power",
+          "Saves Electricity",
+        ],
+        sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
+      },
+    ],
     types: [
       {
         name: "Under the counter",
@@ -60,6 +152,45 @@ const products = [
   {
     title: "Water Softener",
     id: "water-softener",
+    route: "water-softener",
+    product: [
+      {
+        name: "Portable Softener",
+        img: "",
+        types: [
+          "Bathroom Softener",
+          "Washing Machine Softener",
+          "Kitchen Softener",
+        ],
+        points: [
+          "100 % Pure Water",
+          "Space Saver Design",
+          "Multi Stage Purification",
+          "Retains Essential Minerals",
+          "Automatic Power",
+          "Saves Electricity",
+        ],
+        sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
+      },
+      {
+        name: "Whole House Softener",
+        img: "",
+        types: [
+          "Semi-Automatic Whole House Softener",
+          "Smart-Automatic Whole House Softener",
+        ],
+        points: [
+          "100 % Pure Water",
+          "Space Saver Design",
+          "Multi Stage Purification",
+          "Retains Essential Minerals",
+          "Automatic Power",
+          "Saves Electricity",
+        ],
+        sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
+      },
+      
+    ],
 
     types: [
       {
@@ -85,7 +216,8 @@ const products = [
   },
   {
     title: "Water Heaters",
-    id: "water-heaters",
+    // id: "water-heaters",
+    // route:"water-heaters",
     types: [
       {
         name: "Electric Storage",
@@ -99,7 +231,8 @@ const products = [
   },
   {
     title: "Air Purifiers",
-    id: "water-purifiers",
+    // id: "air-purifiers",
+    // route:"air-purifiers",
     types: [
       {
         name: "Abc",
@@ -113,7 +246,8 @@ const products = [
   },
   {
     title: "Home Appliances",
-    id: "home-appliances",
+    // id: "home-appliances",
+    // route:"home-appliances",
 
     types: [
       {
