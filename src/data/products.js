@@ -1,5 +1,7 @@
 export const support = {
   title: "Support",
+  navImg: "/Imgs/nav/6.jpg",
+
   types: [
     {
       name: "",
@@ -13,6 +15,7 @@ const products = [
     title: "Water Purifiers",
     route: "water-purifiers",
     id: "water-purifiers",
+    navImg: "/Imgs/nav/1.jpg",
     product: [
       {
         name: "Under the counter",
@@ -80,7 +83,7 @@ const products = [
         ],
         sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
       },
-      
+
       {
         name: "Industrial Use",
         img: "",
@@ -153,6 +156,8 @@ const products = [
     title: "Water Softener",
     id: "water-softener",
     route: "water-softener",
+    navImg: "/Imgs/nav/2.jpg",
+
     product: [
       {
         name: "Portable Softener",
@@ -189,7 +194,6 @@ const products = [
         ],
         sub: "Innovative Versatile Design water purifiers can be placed under the counter of the kitchen",
       },
-      
     ],
 
     types: [
@@ -218,6 +222,8 @@ const products = [
     title: "Water Heaters",
     // id: "water-heaters",
     // route:"water-heaters",
+    navImg: "/Imgs/nav/3.jpg",
+
     types: [
       {
         name: "Electric Storage",
@@ -233,6 +239,8 @@ const products = [
     title: "Air Purifiers",
     // id: "air-purifiers",
     // route:"air-purifiers",
+    navImg: "/Imgs/nav/4.jpg",
+
     types: [
       {
         name: "Abc",
@@ -248,6 +256,7 @@ const products = [
     title: "Home Appliances",
     // id: "home-appliances",
     // route:"home-appliances",
+    navImg: "/Imgs/nav/5.jpg",
 
     types: [
       {

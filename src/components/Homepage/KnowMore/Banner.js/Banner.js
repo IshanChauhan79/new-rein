@@ -2,6 +2,7 @@ import React from "react";
 
 import classes from "./Banner.module.css";
 
+
 function Banner(props) {
   if (props.data.fullSize) {
     return (
@@ -14,7 +15,7 @@ function Banner(props) {
       >
         <div
           style={{
-            backgroundImage: `url(${props.data.bg1})`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}${props.data.bg1})`,
           }}
         >
           <div className={classes.Title}>{props.data.title1}</div>
@@ -22,7 +23,7 @@ function Banner(props) {
 
           {props.data.subImg ? (
             <div className={classes.SubImage}>
-              <img src={props.data.subImg} width="100%" alt=""></img>
+              <img src={process.env.PUBLIC_URL + props.data.subImg} width="100%" alt=""></img>
             </div>
           ) : null}
           {props.data.subText ? (
@@ -35,7 +36,7 @@ function Banner(props) {
         </div>
         <div
           className={classes.BannerImage}
-          style={{ backgroundImage: `url(${props.data.bg2})` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${props.data.bg2})` }}
         ></div>
       </div>
     );
@@ -45,17 +46,17 @@ function Banner(props) {
         <div
           className={classes.BannerHalf}
           style={{
-            backgroundImage: `url(${props.data.bg1})`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}${props.data.bg1})`,
           }}
         >
           <div className={classes.Title}>{props.data.title1}</div>
           <div className={classes.Underline}></div>
           <div className={classes.Product}>
-            <img src={props.data.img1} width="100%" alt=""></img>
+            <img src={process.env.PUBLIC_URL + props.data.img1} width="100%" alt=""></img>
           </div>
           {props.data.subImg ? (
             <div className={classes.SubImage}>
-              <img src={props.data.subImg} width="100%" alt=""></img>
+              <img src={process.env.PUBLIC_URL + props.data.subImg} width="100%" alt=""></img>
             </div>
           ) : null}
           {props.data.subText ? (
@@ -69,17 +70,17 @@ function Banner(props) {
         <div
           className={classes.BannerHalf}
           style={{
-            backgroundImage: `url(${props.data.bg2})`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}${props.data.bg2})`,
           }}
         >
           <div className={classes.Title}>{props.data.title2}</div>
           <div className={classes.Underline}></div>
           <div className={classes.Product}>
-            <img src={props.data.img2} width="100%" alt=""></img>
+            <img src={process.env.PUBLIC_URL + props.data.img2} width="100%" alt=""></img>
           </div>
           {props.data.subImg ? (
             <div className={classes.SubImage}>
-              <img src={props.data.subImg} width="100%" alt=""></img>
+              <img src={process.env.PUBLIC_URL + props.data.subImg} width="100%" alt=""></img>
             </div>
           ) : null}
           {props.data.subText ? (

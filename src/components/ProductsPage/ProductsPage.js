@@ -21,7 +21,7 @@ function ProductsPage() {
       catColor = "#ef3434";
       break;
     default:
-      catColor = catColor;
+      catColor = "blue";
   }
   var details = [];
   for (var i of products) {
@@ -100,14 +100,11 @@ function ProductsPage() {
 
 export default ProductsPage;
 
-{
-  /* <div
+/* <div
           className={classes.BgImage}
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/Imgs/img${1}.png)`,
           }}
         ></div> */
-}
-{
-  /* <img src={process.env.PUBLIC_URL + `/Imgs/img${1}.png`} alt="" /> */
-}
+
+/* <img src={process.env.PUBLIC_URL + `/Imgs/img${1}.png`} alt="" /> */

@@ -1,15 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import TopProducts from "./components/TopProducts/TopProducts";
-import TopSlider from "./components/TopSlider/TopSlider";
-
 import classes from "./App.module.css";
 import Header from "./components/Header/Header";
-import KnowMore from "./components/KnowMore/KnowMore";
-import Search from "./components/Search/Search";
 import Footer from "./components/Footer/Footer";
 import ProductsPage from "./components/ProductsPage/ProductsPage";
+import HomePage from "./components/Homepage/Homepage";
 
 function App() {
   return (
@@ -17,10 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact>
-          <TopSlider />
-          <TopProducts />
-          <KnowMore />
-          <Search />
+          <HomePage />
         </Route>
         <Route path="/products/:name" exact>
           {/* <TopSlider /> */}

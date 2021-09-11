@@ -6,6 +6,7 @@ import SideImage from "./SideImage";
 import { Link } from "react-router-dom";
 
 function NavItem(props) {
+  // console.log(props.data);
   return (
     <div
       className={classes.Nav}
@@ -24,7 +25,7 @@ function NavItem(props) {
         {props.show === props.data.title && (
           <div className={classes.NavSlideDown}>
             <ProductDetails data={props.data} />
-            <SideImage type={props.data.title} />
+            <SideImage type={props.data.title} img={props.data.navImg} />
           </div>
         )}
       </div>
