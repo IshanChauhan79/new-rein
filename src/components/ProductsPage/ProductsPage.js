@@ -6,7 +6,9 @@ import ro1 from "../../assets/images/nav/1.jpg";
 
 import classes from "./ProductsPage.module.css";
 import heart from "../../assets/images/heart.png";
+import ProductSlider from "./ProductSlider/ProductSlider";
 function ProductsPage() {
+  console.log("ProductPage");
   const productName = useParams();
   // console.log(productName.name);
   let catColor = "blue";
@@ -29,7 +31,7 @@ function ProductsPage() {
       details = i.product;
     }
   }
-  // console.log(details);
+  console.log(details);
 
   const productElements = details.map((el) => {
     return (
@@ -37,7 +39,10 @@ function ProductsPage() {
         <div
           className={classes.BgImage}
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/Imgs/img${1}.png)`,
+            backgroundImage:
+              el.bimg !== ""
+                ? `url(${process.env.PUBLIC_URL + el.bimg}`
+                : `url(${process.env.PUBLIC_URL}/Imgs/img${1}.png`,
           }}
         ></div>
         {/* <img
@@ -85,6 +90,7 @@ function ProductsPage() {
             ))}
           </ul>
           <div className={classes.LearnMore}>Learn More</div>
+          {/* <div className={classes.LearnMore}>Learn More</div> */}
         </div>
       </div>
     );
@@ -92,7 +98,7 @@ function ProductsPage() {
 
   return (
     <div className={classes.ProductsPage}>
-      <div className={classes.DisplayProducts}>hello</div>
+      <ProductSlider />
       {productElements}
     </div>
   );

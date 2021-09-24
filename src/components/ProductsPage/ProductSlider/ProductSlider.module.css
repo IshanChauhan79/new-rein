@@ -1,0 +1,10 @@
+.ProductSlider {
+  height: min(100vh, 30rem);
+  overflow: hidden;
+  width: 100%;
+  /* width: min(100%, 50rem); */
+  margin: auto;
+  /* background-position-x: left;
+    background-position-y:bottom ;
+    background-size: cover; */
+}

@@ -16,6 +16,8 @@ import classes from "./BarsMenu.module.css";
 import Social from "../../UI/Social/Social";
 
 function BarsMenu(props) {
+  
+  console.log("BarsMenu");
   const [menuSelected, setMenuSelected] = useState("");
   const [sideMenu, setSideMenu] = useState("");
   const data = [...products, support];

@@ -3,6 +3,8 @@ import { ReactComponent as SearchIcon } from "../../../assets/images/search.svg"
 import classes from "./Search.module.css";
 
 function Search() {
+  
+  console.log("Search");
   const keysWords = [
     "counter",
     "UNDERSHINK UV",

@@ -5,6 +5,8 @@ import classes from "./Logo.module.css";
 import { Link } from "react-router-dom";
 
 function Logo() {
+  
+  console.log("Logo");
   return (
     <div className={classes.Logo}>
       <Link to="/">

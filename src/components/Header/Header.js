@@ -10,6 +10,8 @@ import NavItem from "./NavItem/NavItem";
 import BarsMenu from "./BarsMenu/BarsMenu";
 
 function Header() {
+  console.log("Header");
+
   const [showDropMenu, setDropMenu] = useState(false);
   const [showBackDrop, setBackDrop] = useState(false);
   const [delayHandler, setDelayHandler] = useState(null);

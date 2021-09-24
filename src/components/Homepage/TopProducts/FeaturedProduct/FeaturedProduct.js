@@ -3,6 +3,8 @@ import React from "react";
 import classes from "./FeaturedProduct.module.css";
 
 function FeaturedProduct(props) {
+  
+  console.log("FeaturedProduct");
   let catColor = props.catColor;
   switch (props.catColor) {
     case "yellow":

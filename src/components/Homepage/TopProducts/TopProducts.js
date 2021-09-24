@@ -7,10 +7,8 @@ import softener from "../../../assets/images/products/softener.jpg";
 import plant from "../../../assets/images/products/plant.jpg";
 import storm from "../../../assets/images/products/storm.jpg";
 
-
-
-
-function TopProducts(props) {
+function TopProducts() {
+  console.log("TopProducts");
   return (
     <div className={classes.TopProducts}>
       <div className={classes.Title}>Featured Product</div>
@@ -64,4 +62,4 @@ function TopProducts(props) {
   );
 }
 
-export default TopProducts;
+export default React.memo(TopProducts);

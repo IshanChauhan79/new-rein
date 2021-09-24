@@ -30,6 +30,7 @@
   border-radius: 1.4rem;
   padding: 3px 5px;
   padding-top: 5px;
+  z-index: 2;
 }
 .Img {
   /* border: 1px solid black; */

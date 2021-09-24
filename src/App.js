@@ -8,6 +8,7 @@ import ProductsPage from "./components/ProductsPage/ProductsPage";
 import HomePage from "./components/Homepage/Homepage";
 
 function App() {
+  console.log("App");
   return (
     <div className={classes.App}>
       <Header />

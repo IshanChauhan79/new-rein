@@ -4,6 +4,8 @@ import classes from "./Banner.module.css";
 
 
 function Banner(props) {
+  
+  console.log("Banner");
   if (props.data.fullSize) {
     return (
       <div
