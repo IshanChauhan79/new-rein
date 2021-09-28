@@ -179,7 +179,7 @@ const products = [
       },
       {
         name: "Whole House Softener",
-        bimg: "/Imgs/pages/portable.jpg",
+        bimg: "/Imgs/pages/wholehouse.jpg",
         types: [
           "Semi-Automatic Whole House Softener",
           "Smart-Automatic Whole House Softener",
