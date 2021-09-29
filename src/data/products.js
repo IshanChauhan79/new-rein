@@ -20,6 +20,7 @@ const products = [
       {
         name: "Under the counter",
         bimg: "/Imgs/pages/undercounter.jpg",
+        Pimg: "/Imgs/pages/prod/underCounter.jpg",
         types: [
           "RO",
           "RO+UV",
@@ -42,6 +43,7 @@ const products = [
       {
         name: "Wall Mountable",
         bimg: "/Imgs/pages/wallmountable.jpg",
+        Pimg: "/Imgs/pages/prod/wallMountable.jpg",
         types: [
           "RO",
           "RO+UV",
@@ -64,6 +66,8 @@ const products = [
       {
         name: "Comercial/Office Use",
         bimg: "/Imgs/pages/commercial.jpg",
+        Pimg: "/Imgs/pages/prod/commercialRO.jpg",
+
         types: [
           "RO",
           "RO+UV",
@@ -87,6 +91,8 @@ const products = [
       {
         name: "Industrial Use",
         bimg: "/Imgs/pages/industrial.jpg",
+        Pimg: "/Imgs/pages/prod/industrialRO.jpg",
+
         types: [
           "RO",
           "RO+UV",
@@ -162,6 +168,8 @@ const products = [
       {
         name: "Portable Softener",
         bimg: "/Imgs/pages/portable.jpg",
+        Pimg: "/Imgs/pages/prod/portableSoftener.jpg",
+
         types: [
           "Bathroom Softener",
           "Washing Machine Softener",
@@ -180,6 +188,7 @@ const products = [
       {
         name: "Whole House Softener",
         bimg: "/Imgs/pages/wholehouse.jpg",
+        Pimg: "/Imgs/pages/prod/wholehouseSoftener.jpg",
         types: [
           "Semi-Automatic Whole House Softener",
           "Smart-Automatic Whole House Softener",

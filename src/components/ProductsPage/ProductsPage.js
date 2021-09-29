@@ -2,15 +2,13 @@ import React from "react";
 import { useParams } from "react-router";
 import products from "../../data/products";
 
-import ro1 from "../../assets/images/nav/1.jpg";
-
 import classes from "./ProductsPage.module.css";
 import heart from "../../assets/images/heart.png";
 import ProductSlider from "./ProductSlider/ProductSlider";
+import SearchProduct from "./SearchProduct/SearchProduct";
 function ProductsPage() {
   console.log("ProductPage");
   const productName = useParams();
-  // console.log(productName.name);
   let catColor = "blue";
   switch (catColor) {
     case "yellow":
@@ -59,7 +57,7 @@ function ProductsPage() {
             <img src={heart} alt=""></img>
           </div>
           <div className={classes.ProductImg}>
-            <img src={ro1} alt=""></img>
+            <img src={process.env.PUBLIC_URL + el.Pimg} alt="" />
           </div>
           <div className={classes.Color}>
             Color: blue
@@ -99,7 +97,8 @@ function ProductsPage() {
   return (
     <div className={classes.ProductsPage}>
       <ProductSlider />
-      {productElements}
+      <div className={classes.ProductsListContainer}>{productElements}</div>
+      <SearchProduct />
     </div>
   );
 }
