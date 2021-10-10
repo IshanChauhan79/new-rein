@@ -47,6 +47,15 @@
   color: var(--clr-wb-900);
   font-family: amiko-bold;
 }
+.MenuType a {
+  color: var(--clr-wb-700);
+  font-family: amiko-font;
+  text-decoration: none;
+}
+.MenuType a:hover {
+  color: var(--clr-wb-900);
+  font-family: amiko-bold;
+}
 .Back {
   top: -55px;
   left: 0;

@@ -1,7 +1,7 @@
 .TopProducts {
   background-color: var(--clr-wb-100);
   margin: 2% auto;
-  width: min(100%, 130rem);
+  width: min(100%, 140rem);
   text-align: center;
 }
 .Title {

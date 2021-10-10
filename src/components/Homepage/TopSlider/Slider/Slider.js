@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
-import "./Slider.css";
+import classes from "./Slider.module.css";
 import BtnSlider from "./BtnSlider";
-import dataSlider from "./dataSlider";
+import festive from "../../../../assets/images/homeSlider/festive.png";
+import festiveMobile from "../../../../assets/images/homeSlider/festiveMobile.png";
 
+const Sliders = 2;
 export default function Slider() {
   const [slideIndex, setSlideIndex] = useState(1);
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (slideIndex !== dataSlider.length) {
+      if (slideIndex !== Sliders) {
         setSlideIndex((prev) => prev + 1);
-      } else if (slideIndex === dataSlider.length) {
+      } else if (slideIndex === Sliders) {
         setSlideIndex(1);
       }
     }, 4000);
@@ -19,9 +21,9 @@ export default function Slider() {
   }, [slideIndex]);
 
   const nextSlide = () => {
-    if (slideIndex !== dataSlider.length) {
+    if (slideIndex !== Sliders) {
       setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === dataSlider.length) {
+    } else if (slideIndex === Sliders) {
       setSlideIndex(1);
     }
   };
@@ -30,7 +32,7 @@ export default function Slider() {
     if (slideIndex !== 1) {
       setSlideIndex(slideIndex - 1);
     } else if (slideIndex === 1) {
-      setSlideIndex(dataSlider.length);
+      setSlideIndex(Sliders);
     }
   };
 
@@ -39,29 +41,53 @@ export default function Slider() {
   };
 
   return (
-    <div className="container-slider">
-      {dataSlider.map((obj, index) => {
-        return (
-          <div
-            key={obj.id}
-            className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-          >
-            <img
-              src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.png`}
-              alt=""
-            />
-          </div>
-        );
-      })}
+    <div className={classes.ContainerSlider}>
+      <div
+        className={[
+          classes.SlideFirst,
+          slideIndex === 1 ? classes.SlideActive : null,
+        ].join(" ")}
+      >
+        <img
+          src={festive}
+          alt="opps"
+          width="100%"
+          height="100%"
+          className={classes.Img}
+        />
+        <img
+          src={festiveMobile}
+          alt="opps"
+          width="100%"
+          className={classes.ImgMobile}
+        />
+      </div>
+      <div
+        className={[
+          classes.Slide,
+          slideIndex === 2 ? classes.SlideActive : null,
+        ].join(" ")}
+      >
+        <img src={festive} alt="opps" width="100%" className={classes.Img} />
+        <img
+          src={festiveMobile}
+          alt="opps"
+          width="100%"
+          className={classes.ImgMobile}
+        />
+      </div>
       <BtnSlider moveSlide={nextSlide} direction={"next"} />
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
-      <div className="container-dots">
-        {Array.from({ length: 4 }).map((item, index) => (
+      <div className={classes.DotContainer}>
+        {Array.from({ length: Sliders }).map((item, index) => (
           <div
             key={index}
             onClick={() => moveDot(index + 1)}
-            className={slideIndex === index + 1 ? "dot active" : "dot"}
+            className={[
+              classes.Dot,
+              slideIndex === index + 1 ? classes.ActiveDot : null,
+            ].join(" ")}
           ></div>
         ))}
       </div>

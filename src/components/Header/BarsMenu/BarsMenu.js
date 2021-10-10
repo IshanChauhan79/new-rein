@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { Link } from "react-router-dom";
 import CSSTransition from "react-transition-group/CSSTransition";
 
 import DropDown from "../../UI/DropDown/DropDown";
@@ -16,7 +17,6 @@ import classes from "./BarsMenu.module.css";
 import Social from "../../UI/Social/Social";
 
 function BarsMenu(props) {
-  
   console.log("BarsMenu");
   const [menuSelected, setMenuSelected] = useState("");
   const [sideMenu, setSideMenu] = useState("");
@@ -28,19 +28,25 @@ function BarsMenu(props) {
   const menuclicked = (el) => {
     setMenuSelected(el);
     setSideMenu(el);
+    console.log(data);
   };
   const backClicked = () => {
     setMenuSelected("");
   };
 
   const productList = data.map((pd, i) => (
-    <div
-      className={classes.MenuType}
-      key={pd.title}
-      onClick={() => menuclicked(i)}
-    >
-      <div>{pd.title}</div>
-      <img src={arrowRight} alt="X" height="12px"></img>
+    <div className={classes.MenuType} key={pd.title}>
+      {pd.route ? (
+        <Link to={"/products/" + pd.route}>{pd.title}</Link>
+      ) : (
+        <div>{pd.title}</div>
+      )}
+      <img
+        src={arrowRight}
+        alt=">"
+        height="12px"
+        onClick={() => menuclicked(i)}
+      ></img>
     </div>
   ));
   let menuSelctedElement = null;
@@ -89,7 +95,6 @@ function BarsMenu(props) {
       </CSSTransition>
       <div className={classes.Social}>
         <Social />
-
       </div>
 
       {/* {menuSelected === null ? productList : menuSelctedElement} */}

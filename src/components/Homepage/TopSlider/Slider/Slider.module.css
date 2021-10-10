@@ -1,0 +1,88 @@
+.ContainerSlider {
+  width: 100%;
+  /* min-height: 1000px; */
+  /* margin: 0; */
+  position: relative;
+  box-shadow: 0  10px 20px rgba(0, 0, 0, 0.2);
+}
+.Img{
+  display: block;
+}
+.ImgMobile{
+  display: none;
+  object-fit: cover;
+}
+@media screen and (max-width: 900px){
+  .ImgMobile{
+    display: block;
+  }
+  .Img{
+    display: none;
+  }
+}
+.SlideFirst{
+  position: relative;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+.Slide {
+  position: absolute;
+  top:0;
+  left: 0;
+  right:0;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+.SlideActive {
+  opacity: 1;
+}
+
+.BtnSlide {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.BtnSlide img {
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+}
+.Prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-60%);
+}
+.Next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-60%);
+}
+
+
+.DotContainer{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 50
+}
+.Dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  margin: 0 5px;
+  background: #f1f1f1;
+}
+.ActiveDot {
+  background: rgb(32, 32, 32);
+}
