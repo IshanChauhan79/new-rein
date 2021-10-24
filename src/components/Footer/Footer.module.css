@@ -27,7 +27,7 @@
   font-size: 0.9em;
   margin: 0.8rem;
   color: var(--clr-wb-700);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .FooterItem:hover,
 FooterItem:active,

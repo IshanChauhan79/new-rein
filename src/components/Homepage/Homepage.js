@@ -7,8 +7,6 @@ import KnowMore from "./KnowMore/KnowMore";
 import Search from "./Search/Search";
 
 function HomePage() {
-    
-  console.log("Homepage");
   return (
     <div >
       <TopSlider />

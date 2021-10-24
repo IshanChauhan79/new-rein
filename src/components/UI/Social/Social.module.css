@@ -3,7 +3,7 @@
     display: flex;
     justify-content: flex-end;
 }
-.Social >svg{
+.Social svg{
    height:3rem;
    width: 3rem;
    margin:0.5rem;

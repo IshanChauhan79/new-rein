@@ -1,10 +1,11 @@
 .SearchProduct {
   width: min(100rem, 95%);
-  margin: auto;
+  margin: 4rem auto;
   border-radius: 1rem;
   padding: 2.5rem 2rem;
   display: flex;
-  margin-bottom: 4rem !important;
+  /* margin-top: 4rem;
+  margin-bottom: 4rem !important; */
   background-color: #f4f4f4;
 }
 .FindBox {
@@ -44,7 +45,7 @@
   padding: 0.6rem 2rem;
   font-size: 1.4rem;
   border-radius: 1.5rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   margin: 1rem;
 }
 .FillForm {
@@ -52,7 +53,7 @@
   font-weight: 600;
   text-decoration: underline;
   margin: 1rem;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 @media only screen and (max-width: 47em) {
   .SearchProduct {

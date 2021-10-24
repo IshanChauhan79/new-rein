@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState, useRef } from "react";
+import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import CSSTransition from "react-transition-group/CSSTransition";
 
@@ -17,9 +17,12 @@ import classes from "./BarsMenu.module.css";
 import Social from "../../UI/Social/Social";
 
 function BarsMenu(props) {
-  console.log("BarsMenu");
+  const history = useHistory();
   const [menuSelected, setMenuSelected] = useState("");
   const [sideMenu, setSideMenu] = useState("");
+  const nodeRef = useRef(null);
+  const nodeRef2 = useRef(null);
+
   const data = [...products, support];
   const closeClicked = () => {
     setMenuSelected("");
@@ -28,17 +31,22 @@ function BarsMenu(props) {
   const menuclicked = (el) => {
     setMenuSelected(el);
     setSideMenu(el);
-    console.log(data);
   };
   const backClicked = () => {
     setMenuSelected("");
   };
 
+  const openPage = (link) => {
+    setMenuSelected("");
+    props.closed();
+    history.push("/products/" + link);
+  };
   const productList = data.map((pd, i) => (
     <div className={classes.MenuType} key={pd.title}>
       {pd.route ? (
-        <Link to={"/products/" + pd.route}>{pd.title}</Link>
+        <div onClick={() => openPage(pd.route)}>{pd.title}</div>
       ) : (
+        // <Link to={"/products/" + pd.route}></Link>
         <div>{pd.title}</div>
       )}
       <img
@@ -77,6 +85,7 @@ function BarsMenu(props) {
       </div>
       <CSSTransition
         in={menuSelected === ""}
+        // nodeRef={nodeRef}
         mountOnEnter
         unmountOnExit
         timeout={500}
@@ -85,6 +94,7 @@ function BarsMenu(props) {
         {(state) => <div className={classes.Menu}>{productList}</div>}
       </CSSTransition>
       <CSSTransition
+        // nodeRef={nodeRef2}
         in={menuSelected !== ""}
         mountOnEnter
         unmountOnExit

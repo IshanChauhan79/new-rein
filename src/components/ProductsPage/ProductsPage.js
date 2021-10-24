@@ -4,10 +4,9 @@ import products from "../../data/products";
 
 import classes from "./ProductsPage.module.css";
 import heart from "../../assets/images/heart.png";
-import ProductSlider from "./ProductSlider/ProductSlider";
+import TopSlider from "./TopSlider/TopSlider";
 import SearchProduct from "./SearchProduct/SearchProduct";
 function ProductsPage() {
-  console.log("ProductPage");
   const productName = useParams();
   let catColor = "blue";
   switch (catColor) {
@@ -29,7 +28,6 @@ function ProductsPage() {
       details = i.product;
     }
   }
-  console.log(details);
 
   const productElements = details.map((el) => {
     return (
@@ -59,16 +57,19 @@ function ProductsPage() {
           <div className={classes.ProductImg}>
             <img src={process.env.PUBLIC_URL + el.Pimg} alt="" />
           </div>
-          <div className={classes.Color}>
+          {/* <div className={classes.Color}>
             Color: blue
             <div>
               <div>
                 <div style={{ backgroundColor: "blue" }}></div>
               </div>
               <div>
-                <div style={{ backgroundColor: "red" }}></div>
+                <div style={{ backgroundColor: "black" }}></div>
               </div>
             </div>
+          </div> */}
+          <div>
+            <div className={classes.MobileTitle}>{el.name}</div>
           </div>
           <div className={classes.Variants}>
             Variants:
@@ -78,10 +79,7 @@ function ProductsPage() {
               ))}
             </div>
           </div>
-          <div className={classes.Desc}>
-            Innovative Versatile Design water purifiers can be placed under the
-            counter of the kitchen
-          </div>
+          <div className={classes.Desc}>{el.sub}</div>
           <ul className={classes.Notes}>
             {el.points.map((point) => (
               <li key={point}>{point}</li>
@@ -96,7 +94,7 @@ function ProductsPage() {
 
   return (
     <div className={classes.ProductsPage}>
-      <ProductSlider />
+      <TopSlider />
       <div className={classes.ProductsListContainer}>{productElements}</div>
       <SearchProduct />
     </div>

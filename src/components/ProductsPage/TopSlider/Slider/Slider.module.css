@@ -1,7 +1,7 @@
 .ContainerSlider {
   width: 100%;
   /* min-height: 1000px; */
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
   position: relative;
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
 }
@@ -49,18 +49,18 @@
 }
 .BtnSlide img {
   display: block;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   pointer-events: none;
 }
 .Prev {
   top: 50%;
-  left: 2rem;
+  left: 1.4rem;
   transform: translateY(-60%);
 }
 .Next {
   top: 50%;
-  right: 2rem;
+  right: 1.4rem;
   transform: translateY(-60%);
 }
 
@@ -84,12 +84,12 @@
   background: rgb(32, 32, 32);
 }
 @media screen and (max-width: 900px) {
-  .ImgMobile {
+  /* .ImgMobile {
     display: block;
   }
   .Img {
     display: none;
-  }
+  } */
   .BtnSlide {
     opacity: 0.8;
   }

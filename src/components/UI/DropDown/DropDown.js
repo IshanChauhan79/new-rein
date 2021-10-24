@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import classes from "./DropDown.module.css";
 import animation from "./animation.module.css";
@@ -9,7 +9,7 @@ import arrowDown from "../../../assets/images/arrowDown.png";
 function DropDown(props) {
   const [menuOpen, setMenuOpen] = useState(null);
   const [menu, setMenu] = useState(null);
-
+  const nodeRef = useRef(null);
   const [dropHeight, setDropHeight] = useState(0);
 
   const calcHeight = (el) => {
@@ -49,13 +49,16 @@ function DropDown(props) {
       >
         <CSSTransition
           in={i === menuOpen}
+          // nodeRef={nodeRef}
           onEnter={calcHeight}
           mountOnEnter
           unmountOnExit
           timeout={500}
           classNames={animation}
         >
-          <div className={classes.DropMenu}>{menu}</div>
+          <div className={classes.DropMenu} ref={nodeRef}>
+            {menu}
+          </div>
         </CSSTransition>
       </div>
     </div>

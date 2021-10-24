@@ -1,10 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import classes from "./FeaturedProduct.module.css";
 
 function FeaturedProduct(props) {
-  
-  console.log("FeaturedProduct");
   let catColor = props.catColor;
   switch (props.catColor) {
     case "yellow":
@@ -37,7 +36,9 @@ function FeaturedProduct(props) {
           <div className={[classes.Desc, classes.DescBig].join(" ")}>
             {props.desc}
           </div>
-          <div className={classes.Buy}>Buy now</div>
+          <Link to={props.route}>
+            <div className={classes.Buy}>Buy now</div>
+          </Link>
         </div>
       </div>
     );
@@ -53,7 +54,9 @@ function FeaturedProduct(props) {
       <div className={classes.Title}>{props.title}</div>
       <div className={classes.Underline}></div>
       <div className={classes.Desc}>{props.desc}</div>
-      <div className={classes.Buy}>Buy now</div>
+      <Link to={props.route}>
+        <div className={classes.Buy}>Buy now</div>
+      </Link>
     </div>
   );
 }

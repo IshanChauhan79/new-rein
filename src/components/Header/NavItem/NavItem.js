@@ -6,7 +6,6 @@ import SideImage from "./SideImage";
 import { Link } from "react-router-dom";
 
 function NavItem(props) {
-  // console.log(props.data);
   return (
     <div
       className={classes.Nav}

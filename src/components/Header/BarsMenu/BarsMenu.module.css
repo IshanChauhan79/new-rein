@@ -26,7 +26,7 @@
   right: 0;
   padding: 2rem 2rem;
   background-color: var(--clr-wb-100);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .MenuType {
   display: flex;
@@ -40,6 +40,7 @@
   color: var(--clr-wb-700);
   font-family: amiko-font;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .MenuType:hover,
 .MenuType:active,

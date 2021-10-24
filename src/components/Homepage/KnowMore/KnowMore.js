@@ -4,9 +4,6 @@ import data from "../../../data/KnowMore";
 import Banner from "./Banner.js/Banner";
 
 function KnowMore() {
-  
-  console.log("KnowMore");
-  // const datain=data[0];
   return (
     <div className={classes.KnowMore}>
       <Banner data={data[0]} />

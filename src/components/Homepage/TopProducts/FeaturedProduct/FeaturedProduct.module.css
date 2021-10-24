@@ -6,7 +6,7 @@
   padding-bottom: 0;
   position: relative;
   background-color: var(--background-gray);
-  cursor: pointer;
+  
 }
 .CatBig {
   position: absolute;
@@ -100,6 +100,7 @@
   -ms-transform: rotate(30deg), translateY(0);
   transform: rotateX(30deg) translateY(0);
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .FeaturedProduct:hover .Buy,
 .FeaturedProduct:active .Buy,

@@ -8,7 +8,6 @@ import plant from "../../../assets/images/products/plant.jpg";
 import storm from "../../../assets/images/products/storm.jpg";
 
 function TopProducts() {
-  console.log("TopProducts");
   return (
     <div className={classes.TopProducts}>
       <div className={classes.Title}>Featured Product</div>
@@ -20,6 +19,7 @@ function TopProducts() {
             desc="Starting at Rs.24,499* | Free Maintenance 1 Year | EMI available"
             cat="NEW"
             catColor="blue"
+            route="/products/water-purifiers"
             big
           />
         </div>
@@ -31,6 +31,7 @@ function TopProducts() {
               desc="Starting at Rs.10,499* | Free Maintenance 1 Year | EMI available"
               cat="BEST SELLER"
               catColor="yellow"
+              route="/products/water-purifiers"
             />
             <FeaturedProduct
               img={storm}
@@ -38,15 +39,17 @@ function TopProducts() {
               desc="Starting at Rs.8,499* | Free Maintenance 1 Year | EMI available"
               cat="HOT"
               catColor="red"
+              route="/products/water-purifiers"
             />
           </div>
           <div className={classes.SubProductsRow}>
             <FeaturedProduct
               img={softener}
-              title="SOFTNER"
+              title="SOFTENER"
               desc="Starting at Rs.8,499* | Free Maintenance 1 Year | EMI available"
               cat="HOT"
               catColor="red"
+              route="/products/water-softener"
             />
             <FeaturedProduct
               img={plant}
@@ -54,6 +57,7 @@ function TopProducts() {
               desc="Starting at Rs.8,499* | Free Maintenance 1 Year | EMI available"
               cat="NEW"
               catColor="blue"
+              route="/products/water-purifiers"
             />
           </div>
         </div>

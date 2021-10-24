@@ -3,16 +3,15 @@ import { ReactComponent as SearchIcon } from "../../../assets/images/search.svg"
 import classes from "./Search.module.css";
 
 function Search() {
-  
-  console.log("Search");
   const keysWords = [
-    "counter",
-    "UNDERSHINK UV",
-    "RO",
-    "STORM UV",
-    "Alkaline",
+    "UV",
+    "Under the counter",
     "RO+UV",
-    "RO+UV+Alkaline"
+    "Alkaline",
+    "Customize",
+    "Softener",
+    "Table Dispenser",
+    "Copper"
   ];
   const keyList = keysWords.map((el) => <div key={el}>{el}</div>);
   const submitSearch =(event)=>{

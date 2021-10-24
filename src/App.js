@@ -3,9 +3,8 @@ import { Switch, Route } from "react-router-dom";
 
 import classes from "./App.module.css";
 import Header from "./components/Header/Header";
-// import Footer from "./components/Footer/Footer";
-// import ProductsPage from "./components/ProductsPage/ProductsPage";
-// import HomePage from "./components/Homepage/Homepage";
+import Float from "./components/UI/Float/Float";
+import ScrollToTop from "./utility/ScrollToTop";
 
 const Footer = lazy(() => import("./components/Footer/Footer"));
 const ProductsPage = lazy(() =>
@@ -13,10 +12,11 @@ const ProductsPage = lazy(() =>
 );
 const HomePage = lazy(() => import("./components/Homepage/Homepage"));
 
+
 function App() {
-  console.log("App");
   return (
     <div className={classes.App}>
+      <ScrollToTop/>
       <Header />
       <Switch>
         <Route path="/" exact>
@@ -54,6 +54,7 @@ function App() {
           Icons by Icons8
         </a>
       </div>
+      <Float/>
     </div>
   );
 }
