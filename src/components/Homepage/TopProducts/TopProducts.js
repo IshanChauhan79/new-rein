@@ -9,7 +9,7 @@ import storm from "../../../assets/images/products/storm.jpg";
 
 function TopProducts() {
   return (
-    <div className={classes.TopProducts}>
+    <section className={classes.TopProducts}>
       <div className={classes.Title}>Featured Product</div>
       <div className={classes.FeaturedProductsContainer}>
         <div className={classes.MainProduct}>
@@ -62,7 +62,7 @@ function TopProducts() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

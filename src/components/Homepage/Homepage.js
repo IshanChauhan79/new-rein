@@ -8,12 +8,12 @@ import Search from "./Search/Search";
 
 function HomePage() {
   return (
-    <div >
+    <main >
       <TopSlider />
       <TopProducts />
       <KnowMore />
       <Search />
-    </div>
+    </main>
   );
 }
 

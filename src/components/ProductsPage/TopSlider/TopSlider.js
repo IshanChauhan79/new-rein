@@ -4,9 +4,9 @@ import classes from "./TopSlider.module.css";
 import Slider from './Slider/Slider'
 function TopSlider() {
   return (
-    <div
+    <section
       className={classes.TopSlider}   
-    ><Slider /></div>
+    ><Slider /></section>
   );
 }
 

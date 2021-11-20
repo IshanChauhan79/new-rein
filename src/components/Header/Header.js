@@ -78,7 +78,7 @@ function Header() {
     />
   );
   return (
-    <div className={classes.Header}>
+    <header className={classes.Header}>
       <div className={classes.HeaderList}>
         <Logo />
         <div
@@ -123,7 +123,7 @@ function Header() {
       <BarsMenu show={showBarsMenu} closed={closeBarsMenu} />
 
       {showBackDrop && <div className={classes.Backdrop}></div>}
-    </div>
+    </header>
   );
 }
 

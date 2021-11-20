@@ -1,15 +1,28 @@
 import React from "react";
 import img from "../../assets/images/logo.png";
+import img2 from "../../assets/images/logo2.png";
 
 import classes from "./Logo.module.css";
 import { Link } from "react-router-dom";
 
-function Logo() {
+function Logo(props) {
   return (
     <div className={classes.Logo}>
-      <Link to="/">
-        <img src={img} alt="Rein"></img>
-      </Link>
+      {props.noLink ? (
+        <img
+          src={props.logo2 ? img2 : img}
+          height={props.logo2 ? "40px" : "30px"}
+          alt="Rein"
+        ></img>
+      ) : (
+        <Link to="/">
+          <img
+            src={props.logo2 ? img2 : img}
+            height={props.logo2 ? "40px" : "30px"}
+            alt="Rein"
+          ></img>
+        </Link>
+      )}
     </div>
   );
 }

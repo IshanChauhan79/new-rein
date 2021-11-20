@@ -9,6 +9,7 @@ import sd from "../../../../assets/images/homeSlider/sd.jpg";
 import usM from "../../../../assets/images/homeSlider/usM.jpg";
 import wsM from "../../../../assets/images/homeSlider/wsM.jpg";
 import sdM from "../../../../assets/images/homeSlider/sdM.jpg";
+import { Link } from "react-router-dom";
 
 const Sliders = 4;
 export default function Slider() {
@@ -54,6 +55,11 @@ export default function Slider() {
           slideIndex === 1 ? classes.SlideActive : null,
         ].join(" ")}
       >
+        <Link
+          to="/products/water-softener"
+          className={classes.Link}
+          style={{ zIndex: 1 ? 5 : "inherit" }}
+        ></Link>
         <img
           src={festive}
           alt="opps"
@@ -74,6 +80,11 @@ export default function Slider() {
           slideIndex === 2 ? classes.SlideActive : null,
         ].join(" ")}
       >
+        <Link
+          to="/products/water-purifiers"
+          className={classes.Link}
+          style={{ zIndex: 1 ? 5 : "inherit" }}
+        ></Link>
         <img src={us} alt="opps" width="100%" className={classes.Img} />
         <img src={usM} alt="opps" width="100%" className={classes.ImgMobile} />
       </div>
@@ -83,6 +94,11 @@ export default function Slider() {
           slideIndex === 3 ? classes.SlideActive : null,
         ].join(" ")}
       >
+        <Link
+          to="/products/water-softener"
+          className={classes.Link}
+          style={{ zIndex: 1 ? 5 : "inherit" }}
+        ></Link>
         <img src={ws} alt="opps" width="100%" className={classes.Img} />
         <img src={wsM} alt="opps" width="100%" className={classes.ImgMobile} />
       </div>

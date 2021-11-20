@@ -93,11 +93,11 @@ function ProductsPage() {
   });
 
   return (
-    <div className={classes.ProductsPage}>
+    <main className={classes.ProductsPage}>
       <TopSlider />
-      <div className={classes.ProductsListContainer}>{productElements}</div>
+      <section className={classes.ProductsListContainer}>{productElements}</section>
       <SearchProduct />
-    </div>
+    </main>
   );
 }
 

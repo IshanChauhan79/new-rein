@@ -18,7 +18,7 @@ function Search() {
       event.preventDefault();
   }
   return (
-    <div className={classes.Search}>
+    <section className={classes.Search}>
       <div className={classes.Title}>Looking for something else?</div>
       <form className={classes.SearchForm} onSubmit={submitSearch}>
         <button type="submit" className={classes.SearchButton}>
@@ -31,7 +31,7 @@ function Search() {
         ></input>
       </form>
       <div className={classes.KeyWordsContainer}>{keyList}</div>
-    </div>
+    </section>
   );
 }
 

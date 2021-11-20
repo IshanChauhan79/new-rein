@@ -1,13 +1,13 @@
 import React from "react";
-import classes from "./TopSlider.module.css";
+import classes from "./CustomerSlider.module.css";
 // import image from "../../assets/images/slider.png";
 import Slider from './Slider/Slider'
-function TopSlider() {
+function CustomerSlider() {
   return (
     <section
-      className={classes.TopSlider}   
+      className={classes.CustomerSlider}   
     ><Slider /></section>
   );
 }
 
-export default TopSlider;
+export default CustomerSlider;

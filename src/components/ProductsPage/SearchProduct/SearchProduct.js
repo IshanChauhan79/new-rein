@@ -5,7 +5,7 @@ import down from "../../../assets/images/arrowDown.png";
 
 function SearchProduct() {
   return (
-    <div className={classes.SearchProduct}>
+    <section className={classes.SearchProduct}>
       <div className={classes.FindBox}>
         <h6 className={classes.QuickSearch}>Quick Search</h6>
         <h2 className={classes.FindTitle}>Lets find your water purifiers</h2>
@@ -40,7 +40,7 @@ function SearchProduct() {
           <div className={classes.Find}>Find</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

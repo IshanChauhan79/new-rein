@@ -1,7 +1,6 @@
 import React, { useState,useRef } from "react";
 
 import classes from "./Float.module.css";
-import { ReactComponent as Whatsapp } from "../../../assets/images/whatsapp.svg";
 import call from "../../../assets/images/call2.png";
 import whatsapp from "../../../assets/images/whatsapp.png";
 import shop from "../../../assets/images/shop.png";
@@ -17,7 +16,7 @@ function Float() {
     setHeight(height);
   };
   return (
-    <div className={classes.Float}>
+    <aside className={classes.Float}>
       <div
         onClick={() => setFloatOpen((prev) => !prev)}
         className={classes.Contact}
@@ -65,7 +64,7 @@ function Float() {
           </div>
         </CSSTransition>
       </div>
-    </div>
+    </aside>
   );
 }
 

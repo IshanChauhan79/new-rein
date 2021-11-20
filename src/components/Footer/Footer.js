@@ -25,7 +25,7 @@ function Footer() {
     );
   });
   return (
-    <div className={classes.Footer}>
+    <footer className={classes.Footer}>
       <div className={classes.Topbar}>
         <div className={classes.FooterTable}>{footerTable}</div>
       </div>
@@ -36,7 +36,7 @@ function Footer() {
       <div className={classes.SocialBox}>
         <Social />
       </div>
-    </div>
+    </footer>
   );
 }
 
