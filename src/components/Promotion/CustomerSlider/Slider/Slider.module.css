@@ -6,7 +6,6 @@
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
 }
 
-
 .SlideFirst {
   position: relative;
   opacity: 0;
@@ -52,28 +51,29 @@
   border-radius: 4rem;
   text-align: center;
   box-shadow: 0 0 1rem 0.3rem rgb(0 0 0 / 16%);
+  min-height: 20rem;
 }
 
 .WhatCustomer {
   font-size: 1.5rem;
   margin: 0;
 }
-.CustomerReview{
+.CustomerReview {
   font-size: 1.2rem;
   margin: 0;
 }
-.CustomerName{
+.CustomerName {
   color: #234976;
   font-size: 1.4rem;
-  margin:0;
+  margin: 0;
   margin-top: 1.5rem;
 }
-.Location{
-  margin:0;
+.Location {
+  margin: 0;
   font-size: 1.2rem;
 }
 
-.Value{
+.Value {
   position: relative;
   color: #234976;
   font-size: 1.4rem;
@@ -94,5 +94,30 @@
 @media screen and (max-width: 900px) {
   .BtnSlide {
     opacity: 0.8;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .ReviewsCard {
+    width: min(100%, 80rem);
+    padding: 3rem 5rem;
+    min-height: 32rem;
+  }
+
+  .WhatCustomer {
+    font-size: 1.8rem;
+  }
+  .CustomerReview {
+    font-size: 1.5rem;
+  }
+  .CustomerName {
+    font-size: 1.7rem;
+  }
+  .Location {
+    font-size: 1.5rem;
+  }
+
+  .Value {
+    font-size: 1.7rem;
   }
 }

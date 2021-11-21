@@ -1,7 +1,7 @@
 .Social{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
 }
 .Social svg{
    height:3rem;
@@ -11,6 +11,6 @@
 }
 @media only screen and (max-width: 47em) {
     .Social{
-        justify-content: center;
+        justify-content: center  !important;
     }
   }

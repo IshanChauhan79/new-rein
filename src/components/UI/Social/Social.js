@@ -7,9 +7,16 @@ import { ReactComponent as Facebook } from "../../../assets/images/social/facebo
 import { ReactComponent as LinkedIn } from "../../../assets/images/social/linkedin.svg";
 import { ReactComponent as Whatsapp } from "../../../assets/images/social/whatsapp.svg";
 
-function Social() {
+function Social(props) {
   return (
-    <div className={classes.Social}>
+    <div
+      className={classes.Social}
+      style={{
+        justifyContent: props.JustifyContent
+          ? props.JustifyContent
+          : "flex-end",
+      }}
+    >
       <a
         href="https://www.facebook.com/reinwaterpurifiers"
         target="_blank"
