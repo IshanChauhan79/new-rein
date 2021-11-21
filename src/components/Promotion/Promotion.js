@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import axios from "axios";
 
 import classes from "./Promotion.module.css";
 import whatsapp from "../../assets/images/promo/shareWa.jpg";
@@ -28,6 +29,31 @@ const varients = [
 ];
 
 function Promotion(props) {
+  const number = useRef();
+  useEffect(()=>{
+    axios.get('https://rein-596c1-default-rtdb.firebaseio.com/prod')
+    .then((response)=>{
+      console.log(response)
+    })
+  })
+
+  const requestCallSubmit = (e) => {
+    e.preventDefault();
+    console.log(number.current.value);
+    axios
+      .post("https://rein-596c1-default-rtdb.firebaseio.com/promo", {
+        title: "UnderSink",
+        number: number.current.value,
+      })
+      .then((response) => {
+        console.log(response);
+        number.current.value = "";
+        // setPost(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <main className={classes.Promotion}>
       <section>
@@ -85,6 +111,10 @@ function Promotion(props) {
       <section className={classes.RequestContainer}>
         <div className={classes.Request}>
           <p className={classes.RequestTitle}>Request a Call Back</p>
+          <form onSubmit={requestCallSubmit}>
+            <input type="number" ref={number}></input>
+            <button type="submit">Request</button>
+          </form>
           <p className={classes.RequestTandC}>
             By Providing my number, I agree that REIN can contact me via
             phone/e-mail/SMS/WhatApp and/or pre-recorded messages using the
@@ -99,7 +129,9 @@ function Promotion(props) {
           href="https://wa.me/message/IWR4R4FPG2WVH1"
           target="_blank"
           rel="noreferrer"
-        >.</a>
+        >
+          .
+        </a>
         <img src={whatsapp} alt="" width="100%" style={{ display: "block" }} />
       </section>
       {/* <Form /> */}
