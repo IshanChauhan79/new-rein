@@ -26,6 +26,7 @@
 }
 .VariantTitle {
   display: inline-block;
+  text-align: center;
   color: #234976;
   margin: auto;
   padding: 0;
@@ -132,7 +133,6 @@
   font-size: 1.8rem;
 }
 .RequestTandC {
-  font-weight: 600;
   font-size: 0.8rem;
   margin: 0;
   padding: 0;
@@ -181,6 +181,7 @@
   border-top: 0.2px solid rgb(201, 201, 201);
   font-size: 1rem;
   padding: 2rem 0;
+  padding-bottom: 4rem;
   width: 50%;
   margin: 0;
   margin: auto;
@@ -189,7 +190,7 @@
   margin: 1.2rem 0px;
   padding: 0.3rem 1rem;
   background-color: transparent;
-  width: 120px;
+  width: 170px;
 }
 .RequestNumberInput:focus {
   outline: none;

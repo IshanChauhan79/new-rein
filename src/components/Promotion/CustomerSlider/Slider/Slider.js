@@ -11,7 +11,7 @@ export default function Slider() {
       } else if (slideIndex === Sliders) {
         setSlideIndex(1);
       }
-    }, 4000);
+    }, 10000);
     return () => {
       clearTimeout(timeout);
     };
