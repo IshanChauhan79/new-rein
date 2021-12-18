@@ -11,14 +11,15 @@ function Logo(props) {
       {props.noLink ? (
         <img
           src={props.logo2 ? img2 : img}
-          height={props.logo2 ? "40px" : "30px"}
+          height={props.logo2 ? "40px" : "40px"}
           alt="Rein"
         ></img>
       ) : (
         <Link to="/">
           <img
+            style={{ position:'relative',bottom:'-5px' }}
             src={props.logo2 ? img2 : img}
-            height={props.logo2 ? "40px" : "30px"}
+            height={props.logo2 ? "40px" : "40px"}
             alt="Rein"
           ></img>
         </Link>

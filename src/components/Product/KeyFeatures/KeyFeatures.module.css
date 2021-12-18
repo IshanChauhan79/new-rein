@@ -1,0 +1,109 @@
+.KeyFeatures {
+  display: flex;
+  flex-direction: column;
+  font-family: amiko-font;
+  background-color: white;
+}
+.Title{
+  text-align: center; 
+  font-size: 3rem;
+  position: relative;
+  background-color: #F9FAFE;
+}
+.Title::after {
+  content: "";
+  width: 15rem;
+  position: absolute;
+  height: 0.2rem;
+  background-color: black;
+  /* border-radius: 100rem; */
+  overflow: hidden;
+  bottom: -0.3rem;
+  left:50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+@keyframes mymove {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+.KeyFeatures p,
+.KeyFeatures h1,
+.KeyFeatures h2,
+.KeyFeatures h3,
+.KeyFeatures h4 {
+  margin: 0;
+}
+.FeatureDiv {
+  display: flex;
+  padding: 2rem 3rem;
+  min-height: 25rem;
+  position: relative;
+}
+.FeatureDesc {
+  width: 60%;
+}
+/* .FeatureHalfDesc  {
+  width: 50% !important;
+} */
+.FeatureDesc h2 {
+  /* font-size: 1.4rem ; */
+  font-weight: 500;
+  position: relative;
+  padding: 0;
+  display: inline-block;
+}
+.FeatureDesc h2::after {
+  content: "";
+  width: 65%;
+  position: absolute;
+  height: 0.2rem;
+  background-color: black;
+  /* border-radius: 100rem; */
+  overflow: hidden;
+  bottom: -0.3rem;
+  left:0%;
+  transition: all 0.5s ease-in-out;
+}
+/* .FeatureDesc h2:hover::after {
+  animation: mymove 0.6s 1;
+} */
+
+.FeatureDesc p {
+  font-size: 1.4rem;
+  margin-top: 1.3rem;
+}
+
+.FeatureImg {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FeatureImg img {
+  max-height: 20rem;
+}
+.HalfData{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+}
+.HalfData p{
+  font-size: 1.2rem;
+  margin-right:2rem ;
+  height: 100%;
+}
+@media only screen and (max-width: 60em) {
+
+}
+
+@media only screen and (max-width: 40em) {
+
+}

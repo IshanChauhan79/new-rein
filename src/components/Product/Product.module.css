@@ -1,0 +1,17 @@
+.Product{
+    margin:auto;
+    margin-top: 7rem;
+    background-color: #F9FAFE;
+}
+.WidthNotFull{ 
+    width: min(100%, 140rem);
+    margin:auto;
+}
+.Share{
+    width: min(100%, 70rem);
+    margin: auto;
+}
+.SecondHalf{
+    width: min(100%, 140rem);
+    margin:auto;
+}

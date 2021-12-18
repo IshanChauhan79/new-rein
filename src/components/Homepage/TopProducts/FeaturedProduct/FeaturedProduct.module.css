@@ -70,7 +70,7 @@
   position: relative;
   opacity: 1;
   min-height: 3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   -webkit-transform: rotate(0deg), translateY(0);
   -ms-transform: rotate(0deg), translateY(0);
   transform: rotateX(0deg) translateY(0);
@@ -114,6 +114,24 @@
 .Buy:active,
 .Buy:focus {
   background-color: var(--clr-wb-700);
+}
+@media only screen and (max-width: 40em) {
+  .TitleBig {
+    font-size: 2.0rem;
+    margin: 0.4rem 0;
+  }
+  .DescBig {
+    font-size: 1.3rem !important;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .Desc {
+    font-size: 1.1rem;
+  }
+  .Title {
+    font-size: 1.6rem;
+    margin: 0.2rem 0;
+  }
 }
 @media only screen and (max-width: 31em) {
   .Cat {

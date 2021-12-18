@@ -53,9 +53,9 @@
 }
 
 
-.BtnSlide:hover {
+/* .BtnSlide:hover {
   opacity: 1;
-}
+} */
 .BtnSlide img {
   display: block;
   width: 3.5rem;
@@ -99,7 +99,12 @@
   .Img {
     display: none;
   }
-  .BtnSlide {
-    opacity: 0.8;
+  .Dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    margin: 0 5px;
+    background: #f1f1f1;
   }
 }

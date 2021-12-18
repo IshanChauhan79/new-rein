@@ -18,7 +18,7 @@ const products = [
     navImg: "/Imgs/nav/1.jpg",
     product: [
       {
-        name: "Under the counter",
+        name: "Under the Counter",
         color:[],
         bimg: "/Imgs/pages/undercounter.jpg",
         Pimg: "/Imgs/pages/prod/underCounter.jpg",
@@ -125,22 +125,24 @@ const products = [
     ],
     types: [
       {
-        name: "Under the counter",
+        name: "Under the Counter",
         cate: [
-          "REIN UNDERSHINK UV",
-          "REIN UNDERSHINK NF+UV",
-          "REIN UNDERSHINK NF+UV+Alkaline",
-          "REIN UNDERSHINK NF+UV+Copper",
-          "REIN UNDERSHINK RO",
-          "REIN UNDERSHINK RO+UV",
-          "REIN UNDERSHINK RO+UV+Alkaline",
-          "REIN UNDERSHINK RO+UV+Copper",
+          "REIN UNDERSINK UV",
+          "REIN UNDERSINK UV+Alkaline ",
+          "REIN UNDERSINK NF+UV",
+          "REIN UNDERSINK NF+UV+Alkaline",
+          "REIN UNDERSINK NF+UV+Copper",
+          "REIN UNDERSINK RO",
+          "REIN UNDERSINK RO+UV",
+          "REIN UNDERSINK RO+UV+Alkaline",
+          "REIN UNDERSINK RO+UV+Copper",
         ],
       },
       {
         name: "Wall Mountable",
         cate: [
           "REIN STORM UV",
+          "REIN STORM UV+Alkaline",
           "REIN STORM NF+UV",
           "REIN STORM NF+UV+Alkaline",
           "REIN STORM NF+UV+Copper",

@@ -5,7 +5,7 @@ import classes from "./Search.module.css";
 function Search() {
   const keysWords = [
     "UV",
-    "Under the counter",
+    "Under the Counter",
     "RO+UV",
     "Alkaline",
     "Customize",

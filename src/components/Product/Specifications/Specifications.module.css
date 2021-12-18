@@ -1,0 +1,46 @@
+.Specifications {
+  margin-top: 2rem;
+}
+.Title {
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+  /* background-color: #F9FAFE; */
+  border-bottom: 1px solid lightgray;
+}
+.Title::after {
+  content: "";
+  width: 17rem;
+  position: absolute;
+  height: 0.2rem;
+  background-color: black;
+  /* border-radius: 100rem; */
+  overflow: hidden;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+.SpecsRow {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    
+}
+.SpecsRow> div {
+    width: 50%;
+}
+.SpecsRow p{
+    padding: 0;
+    margin:0;
+}
+.SpecsTitle{
+    margin-top: 2rem !important;
+    margin-left: 1rem !important;
+    font-size: 2.4rem;
+}
+.SpecsDetail{
+    font-size: 1.6rem;
+    color: gray;
+    margin: 1rem 1rem !important;
+
+}

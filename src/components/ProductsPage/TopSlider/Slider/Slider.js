@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Slider.module.css";
 import BtnSlider from "./BtnSlider";
-import festive from "../../../../assets/images/homeSlider/festive.jpg";
-import festiveMobile from "../../../../assets/images/homeSlider/festiveMobile.jpg";
-import us from "../../../../assets/images/homeSlider/us.jpg";
-import ws from "../../../../assets/images/homeSlider/ws.jpg";
-import sd from "../../../../assets/images/homeSlider/sd.jpg";
-import usM from "../../../../assets/images/homeSlider/usM.jpg";
-import wsM from "../../../../assets/images/homeSlider/wsM.jpg";
-import sdM from "../../../../assets/images/homeSlider/sdM.jpg";
 
-const Sliders = 4;
-export default function Slider() {
+export default function Slider(props) {
+  const { imgs } = props;
+  const Sliders = imgs.length;
   const [slideIndex, setSlideIndex] = useState(1);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (slideIndex !== Sliders) {
@@ -24,7 +18,7 @@ export default function Slider() {
     return () => {
       clearTimeout(timeout);
     };
-  }, [slideIndex]);
+  }, [slideIndex, Sliders]);
 
   const nextSlide = () => {
     if (slideIndex !== Sliders) {
@@ -48,53 +42,57 @@ export default function Slider() {
 
   return (
     <div className={classes.ContainerSlider}>
-      <div
-        className={[
-          classes.SlideFirst,
-          slideIndex === 1 ? classes.SlideActive : null,
-        ].join(" ")}
-      >
-        <img
-          src={festive}
-          alt="opps"
-          width="100%"
-          height="100%"
-          className={classes.Img}
-        />
-        <img
-          src={festiveMobile}
-          alt="opps"
-          width="100%"
-          className={classes.ImgMobile}
-        />
-      </div>
-      <div
-        className={[
-          classes.Slide,
-          slideIndex === 2 ? classes.SlideActive : null,
-        ].join(" ")}
-      >
-        <img src={us} alt="opps" width="100%" className={classes.Img} />
-        <img src={usM} alt="opps" width="100%" className={classes.ImgMobile} />
-      </div>
-      <div
-        className={[
-          classes.Slide,
-          slideIndex === 3 ? classes.SlideActive : null,
-        ].join(" ")}
-      >
-        <img src={ws} alt="opps" width="100%" className={classes.Img} />
-        <img src={wsM} alt="opps" width="100%" className={classes.ImgMobile} />
-      </div>
-      <div
-        className={[
-          classes.Slide,
-          slideIndex === 4 ? classes.SlideActive : null,
-        ].join(" ")}
-      >
-        <img src={sd} alt="opps" width="100%" className={classes.Img} />
-        <img src={sdM} alt="opps" width="100%" className={classes.ImgMobile} />
-      </div>
+      {imgs.map((item, i) => {
+        if (i === 0) {
+          return ((
+            <div
+              key={item.web}
+              className={[
+                classes.SlideFirst,
+                slideIndex === i + 1 ? classes.SlideActive : null,
+              ].join(" ")}
+            >
+              <img
+                src={item.web}
+                alt="opps"
+                width="100%"
+                height="100%"
+                className={classes.Img}
+              />
+              <img
+                src={item.web}
+                alt="opps"
+                width="100%"
+                className={classes.ImgMobile}
+              />
+            </div>
+          ))
+        }
+        return (
+          <div
+            key={item.web}
+            className={[
+              classes.Slide,
+              slideIndex === i + 1 ? classes.SlideActive : null,
+            ].join(" ")}
+          >
+            <img
+              src={item.web}
+              alt="opps"
+              width="100%"
+              height="100%"
+              className={classes.Img}
+            />
+            <img
+              src={item.web}
+              alt="opps"
+              width="100%"
+              className={classes.ImgMobile}
+            />
+          </div>
+        )
+      })}
+
       <BtnSlider moveSlide={nextSlide} direction={"next"} />
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 

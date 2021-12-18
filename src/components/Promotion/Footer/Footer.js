@@ -37,6 +37,7 @@ function Footer(props) {
           number.current.value = "";
           closeMenu();
           setMenu(false)
+          window.gtag_report_conversion();
         })
         .catch((err) => {
           console.log(err);

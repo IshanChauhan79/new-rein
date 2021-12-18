@@ -8,6 +8,7 @@ import products, { support } from "../../data/products";
 import Logo from "../Logo/Logo";
 import NavItem from "./NavItem/NavItem";
 import BarsMenu from "./BarsMenu/BarsMenu";
+import Product from "./Product/Product";
 
 function Header() {
   const [showDropMenu, setDropMenu] = useState(false);
@@ -79,50 +80,54 @@ function Header() {
   );
   return (
     <header className={classes.Header}>
-      <div className={classes.HeaderList}>
-        <Logo />
-        <div
-          className={classes.Navigation}
-          onMouseLeave={(e) => backdropMouseLeave(e)}
-        >
-          {navList}
+      <div className={classes.HeaderListDiv}>
+        <div className={classes.HeaderList}>
+          <Logo />
+          <div style={{ width: '20px' }} />
           <div
-            className={classes.NavHoverOpen}
-            style={{
-              maxHeight: showBackDrop ? "70vh" : "0",
-              visibility: showBackDrop ? "visible" : "hidden",
-            }}
-          ></div>
+            className={classes.Navigation}
+            onMouseLeave={(e) => backdropMouseLeave(e)}
+          >
+            {navList}
+            <div
+              className={classes.NavHoverOpen}
+              style={{
+                maxHeight: showBackDrop ? "70vh" : "0",
+                visibility: showBackDrop ? "visible" : "hidden",
+              }}
+            ></div>
+          </div>
         </div>
-      </div>
-      <div className={classes.HeaderList}>
-        <div
-          className={classes.Navigation}
-          onMouseLeave={(e) => backdropMouseLeave(e)}
-        >
-          {supportElement}
+        <div className={classes.HeaderList}>
           <div
-            className={classes.NavHoverOpen}
-            style={{
-              maxHeight: showBackDrop ? "70vh" : "0",
-              visibility: showBackDrop ? "visible" : "hidden",
-            }}
-          ></div>
-        </div>
+            className={classes.Navigation}
+            onMouseLeave={(e) => backdropMouseLeave(e)}
+          >
+            {supportElement}
+            <div
+              className={classes.NavHoverOpen}
+              style={{
+                maxHeight: showBackDrop ? "70vh" : "0",
+                visibility: showBackDrop ? "visible" : "hidden",
+              }}
+            ></div>
+          </div>
 
-        <div className={classes.Search}>
-          <Search />
+          <div className={classes.Search}>
+            <Search />
+          </div>
+          <div className={classes.Bars} onClick={barMenuClicked}>
+            <Bar />
+          </div>
         </div>
-        <div className={classes.Bars} onClick={barMenuClicked}>
-          <Bar />
-        </div>
+        {showBarsMenu && (
+          <div className={classes.BarsBackdrop} onClick={closeBarsMenu}></div>
+        )}
+        <BarsMenu show={showBarsMenu} closed={closeBarsMenu} />
+
+        {showBackDrop && <div className={classes.Backdrop}></div>}
       </div>
-      {showBarsMenu && (
-        <div className={classes.BarsBackdrop} onClick={closeBarsMenu}></div>
-      )}
-      <BarsMenu show={showBarsMenu} closed={closeBarsMenu} />
-
-      {showBackDrop && <div className={classes.Backdrop}></div>}
+      <Product />
     </header>
   );
 }

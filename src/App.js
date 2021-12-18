@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import classes from "./App.module.css";
 import Header from "./components/Header/Header";
+import Product from "./components/Product/Product";
 import Float from "./components/UI/Float/Float";
 import ScrollToTop from "./utility/ScrollToTop";
 
@@ -35,6 +36,9 @@ function App() {
               <Suspense fallback={<div>Loading...</div>}>
                 <ProductsPage />
               </Suspense>
+            </Route>
+            <Route path="/product/:id" exact >
+              <Product/>
             </Route>
             <Route path="/">
               <div className={classes.NotFound}>404 Page not Found</div>

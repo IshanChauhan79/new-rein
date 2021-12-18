@@ -34,7 +34,7 @@
 .Underline {
   width: 50%;
   border-bottom: 2px solid var(--clr-wb-900);
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 }
 .Product {
   position: absolute;
@@ -45,13 +45,14 @@
   transform: translateY(-50%);
 }
 .KnowButton {
+  font-size: 1.6rem;
   padding: 0.8rem 1rem;
   padding-bottom: 0.7rem;
   background-color: var(--clr-wb-900);
   color: var(--clr-wb-100);
   display: inline-block;
   border-radius: 2rem;
-  margin: 3rem 1rem;
+  margin: 3rem 0rem;
   cursor: pointer;
   text-decoration: none;
 }
@@ -84,7 +85,7 @@
 }
 .SubImage {
   width: 40%;
-  margin: 0.6rem 0.6rem;
+  margin: 0.6rem 0rem;
 }
 .SubText {
   font-size: 2rem;
@@ -109,12 +110,24 @@
   }
 
   .Title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
     width: 90%;
   }
   .BottomText {
     bottom: 15%;
+  }
+  .KnowButton {
+    font-size: 1.3rem;
+    padding: 0.6rem 0.8rem;
+    padding-bottom: 0.6rem;
+    margin: 3rem 1rem;
+  }
+  .BottomText {
+    font-size: 1.1rem;
+  }
+  .BottomText::after {
+    font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 35em) {

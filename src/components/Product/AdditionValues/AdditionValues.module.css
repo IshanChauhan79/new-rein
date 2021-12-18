@@ -1,0 +1,30 @@
+.OnlyRein{
+  font-size:2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.AdditionValues {
+  padding: 2.5rem 0rem;
+}
+.AddedValuesRow {
+  display: flex;
+  justify-content: space-evenly;
+}
+.AddedValues {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  max-width: 8rem;
+}
+.AddedValuesRow:first-child {
+  margin-bottom: 3rem;
+}
+
+.AddedValues > p {
+  margin: 0;
+}
+.AddedValues > img {
+  width: 70%;
+}

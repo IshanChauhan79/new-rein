@@ -84,13 +84,13 @@
   background: rgb(32, 32, 32);
 }
 @media screen and (max-width: 900px) {
-  /* .ImgMobile {
-    display: block;
+  .Dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    margin: 0 5px;
+    background: #f1f1f1;
   }
-  .Img {
-    display: none;
-  } */
-  .BtnSlide {
-    opacity: 0.8;
-  }
+
 }
