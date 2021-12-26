@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation, useParams } from "react-router";
 import { ReactComponent as Search } from "../../assets/images/search.svg";
 import { ReactComponent as Bar } from "../../assets/images/bars.svg";
 
@@ -10,12 +11,17 @@ import NavItem from "./NavItem/NavItem";
 import BarsMenu from "./BarsMenu/BarsMenu";
 import Product from "./Product/Product";
 
-function Header() {
+function Header(props) {
   const [showDropMenu, setDropMenu] = useState(false);
   const [showBackDrop, setBackDrop] = useState(false);
   const [delayHandler, setDelayHandler] = useState(null);
 
   const [showBarsMenu, setBarsMenu] = useState(false);
+
+  const params = useParams();
+  const location = useLocation();
+  console.log('loc', location);
+  console.log(params);
 
   const barMenuClicked = () => {
     setBarsMenu(true);
@@ -127,7 +133,7 @@ function Header() {
 
         {showBackDrop && <div className={classes.Backdrop}></div>}
       </div>
-      <Product />
+      {props.nav ? <Product data={props.nav} /> : null}
     </header>
   );
 }

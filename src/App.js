@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import classes from "./App.module.css";
+import BuyNow from "./components/BuyNow/BuyNow";
 import Header from "./components/Header/Header";
 import Product from "./components/Product/Product";
 import Float from "./components/UI/Float/Float";
@@ -24,27 +25,34 @@ function App() {
             <PromoPage />
           </Suspense>
         </Route>
-        <Route path="/">
+        <Route path="/buynow" exact>
           <Header />
+          <Suspense fallback={<div>Loading...</div>}>
+            <BuyNow />
+          </Suspense>
+        </Route>
+        <Route path="/">
           <Switch>
             <Route path="/" exact>
+              <Header />
               <Suspense fallback={<div>Loading...</div>}>
                 <HomePage />
               </Suspense>
             </Route>
             <Route path="/products/:name" exact>
+              <Header />
               <Suspense fallback={<div>Loading...</div>}>
                 <ProductsPage />
               </Suspense>
             </Route>
             <Route path="/product/:id" exact >
-              <Product/>
+              <Product />
             </Route>
             <Route path="/">
+              <Header />
               <div className={classes.NotFound}>404 Page not Found</div>
             </Route>
           </Switch>
-
           <div className={classes.Disclaimer}>
             *Images shown here are for representational purpose only, actual may
             vary. All features, specifications and prices are subject to change

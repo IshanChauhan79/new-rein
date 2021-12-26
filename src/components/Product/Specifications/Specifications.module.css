@@ -28,6 +28,7 @@
 }
 .SpecsRow> div {
     width: 50%;
+    padding-left: 10vw;
 }
 .SpecsRow p{
     padding: 0;
@@ -42,5 +43,9 @@
     font-size: 1.6rem;
     color: gray;
     margin: 1rem 1rem !important;
-
+}
+.Treatment{
+  font-size: 1.2rem;
+  color: gray;
+  text-align: center;
 }

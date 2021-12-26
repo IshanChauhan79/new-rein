@@ -9,6 +9,7 @@ import SearchProduct from '../ProductsPage/SearchProduct/SearchProduct'
 
 import classes from "./Product.module.css";
 import Specifications from "./Specifications/Specifications";
+import Header from "../Header/Header";
 
 function Product() {
   const [product, setProduct] = useState({});
@@ -39,18 +40,31 @@ function Product() {
       });
   }, [params]);
 
-  console.log(params);
+  // console.log(Object.keys(product))
+
   if (loading) {
-    return <div className={classes.Product}>Loading</div>;
-  } else if (error) {
     return (
-      <div className={classes.Product}>product not found/error occured</div>
+      <>
+        <Header />
+        <div className={classes.ProductDefault}>Loading</div>
+      </>
+    );
+  } else if (error || (Object.keys(product).length === 0)) {
+    return (
+      <>
+        <Header />
+        <div className={classes.ProductDefault}>product not found/error occured</div>
+      </>
+
     );
   }
-  const { features } = product;
+  const { features, headers, download, specification, nav } = product;
   const { half, full } = features;
+  const { title, para } = download;
   return (
     <>
+      <Header nav={nav} />
+      <img src={headers[0]} alt="" width='100%' style={{ marginTop: "6rem", display: 'block' }} />
       <div className={classes.Product}>
         <div className={classes.WidthNotFull}>
           <KeyFeatures half={half} full={full} />
@@ -63,7 +77,16 @@ function Product() {
       </div>
 
       <div className={classes.WidthNotFull}>
-        <Specifications />
+        <Specifications data={specification} />
+      </div>
+      <div className={classes.DownloadContainer}>
+        <div className={classes.Download} >
+          <div className={classes.DownloadImg} >
+            <img src={shareWa} alt="Download" />
+          </div>
+          <h1>{title}</h1>
+          <p>{para}</p>
+        </div>
       </div>
       <SearchProduct />
 
