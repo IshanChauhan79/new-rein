@@ -72,7 +72,7 @@ const products = [
         sub: "Most Practical & Elegant Wall Mountable Water Purifier for every kitchen",
       },
       {
-        name: "Comercial/Office Use",
+        name: "Commercial/Office Use",
         bimg: "/Imgs/pages/commercial.jpg",
         Pimg: "/Imgs/pages/prod/commercialRO.jpg",
 
@@ -153,7 +153,7 @@ const products = [
         ],
       },
       {
-        name: "Comercial/Office Use",
+        name: "Commercial/Office Use",
         cate: [
           "REIN STORM UV",
           "REIN STORM NF+UV",

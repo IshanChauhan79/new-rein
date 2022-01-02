@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import styled from "styled-components";
+import list from '../../data/buyNow';
 
 const Container = styled.section`
     background-color: #F4F4F4;
@@ -32,6 +34,7 @@ const SubHeading = styled.h2`
 const ButtonContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
+   
 `;
 const Button = styled.button`
     border: 0;
@@ -55,7 +58,7 @@ const Title = styled.p`
     width: 40%;
 `;
 const Input = styled.input`
-    border: 0;
+    border: ${({ error }) => error ? '1px solid red' : '1px solid lightGray'};
     background-color: lightGray;
     padding: 0.6rem 1.5rem;
     border-radius: 0.8rem;
@@ -63,11 +66,140 @@ const Input = styled.input`
     display: block;
 `;
 
+const Select = styled.select`
+    border: 0;
+    background-color: lightGray;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.8rem;
+    flex-grow:2;
+    display: block;
+`;
+const PriceContainer = styled.div`
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 5rem;
+`;
+const PriceTag = styled.span`
+    display: flex;
+    align-items: flex-end;
+`;
+const Price = styled.span`
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+`;
+const Amount = styled.p`
+    padding: 0;
+    margin: 0;
+    font-size: 3.2rem;
+`;
+const Negotiate = styled.p`
+    margin:0;
+    padding:0;
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+
+`;
+
+
+const name_Reg = /^[a-zA-Z\s]*$/;
+
 const BuyNow = () => {
     const [name, setName] = useState('');
+    const [number, setNumber] = useState('');
+    const [pinCode, setPinCode] = useState('');
+    const [isNameError, setIsNameError] = useState(false);
+    const [isNumberError, setIsNumberError] = useState(false);
+    const [isPinCodeError, setIsPinCodeError] = useState(false);
+
+    const [formSubmit, setFormSubmit] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const [formSubmitError, setFormSubmitError] = useState(true);
+
+    const [variants, setVarients] = useState('');
+    const [varient, setVarient] = useState('');
+    const [price, setPrice] = useState('');
+    const [title, setTitle] = useState('');
+
+    useEffect(() => {
+        const prod = 'undersink';
+        const listData = list[prod];
+        const { variants, defaultValue, title } = listData;
+        setVarients(variants);
+        setVarient(defaultValue.name);
+        setPrice(defaultValue.price);
+        setTitle(title);
+    }, []);
+
+    useEffect(() => {
+        console.log('sd')
+        for (const type in variants) {
+            for (let j = 0; j < variants[type].length; j++) {
+                if (varient === variants[type][j]['name']) {
+                    setPrice(variants[type][j]['price']);
+                    return;
+                }
+            }
+        }
+
+    }, [varient, variants])
+
+
     const formSubmitHandler = (e) => {
         e.preventDefault();
-        console.log(name);
+        let checkName = name_Reg.test(name.trim());
+        let checkNumber = number > 0 && number.toString().length === 10;
+        let checkPinCode = pinCode > 0 && pinCode.toString().length === 6;
+        if (checkName && checkNumber && checkPinCode) {
+            setIsLoading(true);
+            setFormSubmitError(true);
+            axios
+                .post("https://rein-596c1-default-rtdb.firebaseio.com/buyNow.json", {
+                    name: name.trim(),
+                    number: number,
+                    pinCode: pinCode,
+                    data: new Date(),
+                })
+                .then((response) => {
+                    setFormSubmitError(false);
+                    setFormSubmit(response);
+                    setName('');
+                    setNumber('');
+                    setPinCode('');
+                })
+                .catch((err) => {
+                    console.log(err);
+                    setFormSubmit(false)
+                    setFormSubmitError("Some Error occurred");
+                });
+
+        } else {
+            setIsNameError(!checkName);
+            setIsNumberError(!checkNumber);
+            setIsPinCodeError(!checkPinCode);
+        }
+
+        console.log('name', name);
+        console.log('number', number);
+        console.log('pin code', pinCode);
+
+        // console.log(checkName)
+        // console.log(checkNumber);
+        // console.log(checkPinCode);
+    }
+
+    const valueChangeHandler = (e, type) => {
+        if (type === 'name') {
+            setName(e.target.value);
+            setIsNameError(false)
+        } else if (type === 'number') {
+            setNumber(e.target.value);
+            setIsNumberError(false);
+        } else if (type === 'pin') {
+            setPinCode(e.target.value);
+            setIsPinCodeError(false);
+        }
+
     }
     return (
         <Container>
@@ -78,7 +210,7 @@ const BuyNow = () => {
                 <SubHeading>
                     Online Gateway is currently Under Maintenance!!!
                 </SubHeading>
-                <p style={{ margin: 0, textAlign: 'center', fontSize: '1.4rem'  }}>
+                <p style={{ margin: 0, textAlign: 'center', fontSize: '1.4rem' }}>
                     But Don't worry, Our team will process your order Manually
                 </p>
                 <Header>
@@ -89,17 +221,45 @@ const BuyNow = () => {
                 </SubHeading>
                 <InputContainer>
                     <Title>Name:</Title>
-                    <Input />
+                    <Input type="text" value={name} onChange={(e) => valueChangeHandler(e, 'name')} error={isNameError} required />
                 </InputContainer>
                 <InputContainer>
                     <Title>Phone Number:</Title>
-                    <Input />
+                    <Input type="number" value={number} onChange={(e) => valueChangeHandler(e, 'number')} error={isNumberError} required />
                 </InputContainer>
                 <InputContainer>
                     <Title>Pin-Code:</Title>
-                    <Input />
+                    <Input type="number" value={pinCode} onChange={(e) => valueChangeHandler(e, 'pin')} error={isPinCodeError} required />
                 </InputContainer>
 
+                <div style={{ height: '20px' }}></div>
+                <SubHeading>
+                    {title}-
+                </SubHeading>
+                {/* <InputContainer>
+                    <Title>Placement:</Title>
+                    <Input type="text" value={name} onChange={(e) => valueChangeHandler(e, 'name')} required />
+                </InputContainer> */}
+                {variants &&
+                    <InputContainer>
+                        <Title>Varients:</Title>
+                        <Select value={varient} onChange={(e) => setVarient(e.target.value)}>
+                            {Object.keys(variants).map(el => (
+                                <optgroup style={{ fontSize: '1rem' }} label={el} key={el}>
+                                    {variants[el].map(pd => (
+                                        <option style={{ fontSize: '1.4rem' }} key={pd.name}>{pd.name}</option>
+                                    ))}
+                                </optgroup>
+                            ))}
+                        </Select>
+                    </InputContainer>}
+                <PriceContainer>
+                    <PriceTag>
+                        <Price> Price:</Price>
+                        <Amount>{price}*/-</Amount>
+                    </PriceTag>
+                    <Negotiate>(Negotiable)</Negotiate>
+                </PriceContainer>
                 <ButtonContainer >
                     <Button type="submit" background="gray">
                         Contact Us
