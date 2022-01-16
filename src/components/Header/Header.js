@@ -11,6 +11,11 @@ import NavItem from "./NavItem/NavItem";
 import BarsMenu from "./BarsMenu/BarsMenu";
 import Product from "./Product/Product";
 
+// const mapBuyLink = {
+//   'undersink1':'/buynow/underink',
+//   "wallmountable": "/buynow/wallMounted"
+// }
+
 function Header(props) {
   const [showDropMenu, setDropMenu] = useState(false);
   const [showBackDrop, setBackDrop] = useState(false);
@@ -18,10 +23,10 @@ function Header(props) {
 
   const [showBarsMenu, setBarsMenu] = useState(false);
 
-  const params = useParams();
-  const location = useLocation();
-  console.log('loc', location);
-  console.log(params);
+  // const params = useParams();
+  // const location = useLocation();
+  // console.log('loc', location);
+  // console.log(params);
 
   const barMenuClicked = () => {
     setBarsMenu(true);
@@ -133,7 +138,7 @@ function Header(props) {
 
         {showBackDrop && <div className={classes.Backdrop}></div>}
       </div>
-      {props.nav ? <Product data={props.nav} /> : null}
+      {props.nav ? <Product data={props.nav} params={props.params} /> : null}
     </header>
   );
 }

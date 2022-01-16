@@ -32,7 +32,7 @@ function Form() {
     //    e.preventDefault();
     var mndFileds = new Array("Last Name");
     var fldLangVal = new Array("Phone\x20Number");
-    console.log("hello");
+    // console.log("hello");
     for (let i = 0; i < mndFileds.length; i++) {
       var fieldObj =
         document.forms["WebToLeads269669000000200313"][mndFileds[i]];

@@ -6,6 +6,7 @@ import classes from "./ProductsPage.module.css";
 import heart from "../../assets/images/heart.png";
 import TopSlider from "./TopSlider/TopSlider";
 import SearchProduct from "./SearchProduct/SearchProduct";
+import { Link } from "react-router-dom";
 function ProductsPage() {
   const productName = useParams();
   let catColor = "blue";
@@ -85,7 +86,15 @@ function ProductsPage() {
               <li key={point}>{point}</li>
             ))}
           </ul>
-          <div className={classes.LearnMore}>Learn More</div>
+          {el.link
+            ? <Link to={el.link} style={{textDecoration: "none"}}>
+                <div className={classes.LearnMore}>Learn More</div>
+              </Link>
+            : <div className={classes.LearnMore}>Learn More</div>
+
+          }
+
+
           {/* <div className={classes.LearnMore}>Learn More</div> */}
         </div>
       </div>

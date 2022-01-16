@@ -22,6 +22,7 @@ const products = [
         color:[],
         bimg: "/Imgs/pages/undercounter.jpg",
         Pimg: "/Imgs/pages/prod/underCounter.jpg",
+        link: '/product/undersink1',
         types: [
           "UF+UV",
           "UF+UV+Alkaline",
@@ -49,6 +50,7 @@ const products = [
         color:["red","blue"],
         bimg: "/Imgs/pages/wallmountable.jpg",
         Pimg: "/Imgs/pages/prod/wallMountable.jpg",
+        link: '/product/wallmountable',
         types: [
           "UF+UV",
           "UF+UV+Alkaline",
@@ -181,6 +183,7 @@ const products = [
         name: "Portable Softener",
         bimg: "/Imgs/pages/portable.jpg",
         Pimg: "/Imgs/pages/prod/portableSoftener.jpg",
+        link: '/product/indoorsoftener',
 
         types: [
           "Bathroom Softener",
@@ -201,6 +204,7 @@ const products = [
         name: "Whole House Softener",
         bimg: "/Imgs/pages/wholehouse.jpg",
         Pimg: "/Imgs/pages/prod/wholehouseSoftener.jpg",
+        link: '/product/softener',
         types: [
           "Manual Whole House Softener",
           "Semi-Automatic Whole House Softener",

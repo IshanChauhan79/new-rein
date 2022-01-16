@@ -10,12 +10,16 @@
   padding-top: 2rem;
 }
 .WidthNotFull {
-  width: min(100%, 140rem);
+  width: min(95%, 140rem);
+  border-radius: 2rem;
   margin: auto;
+  overflow: hidden;
+  box-shadow: 0 3px 10px 0 rgb(0 0 0 / 30%);
+  margin-top: 2rem;
 }
 .Share {
   width: min(100%, 140rem);
-  background-color: darkblue;
+  background-color: #234976;
   margin: auto;
   position: relative;
   margin-top: 2rem;
@@ -39,6 +43,7 @@
   margin: auto;
   padding: 1rem 0;
   min-height: 16rem;
+  margin-top: 2rem;
 }
 .Download h1 {
   margin: 0;
@@ -46,7 +51,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: blue;
+  color: #234976;
 }
 .Download p {
   margin: 0;
@@ -61,8 +66,25 @@
   border-radius: 3rem;
   overflow: hidden;
   margin-top: 1rem;
+  border: 1px solid lightgray;
 }
 .DownloadImg img {
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: 60em) {
+  .Share img {
+    width: min(80%, 70rem);
+    margin-left: 2rem;
+  }
+  .Download h1 {
+    font-size: 2rem;
+  }
+  .DownloadImg {
+    width: 8rem;
+    height: 8rem;
+  }
+  .Download {
+    min-height: 12rem;
+  }
 }

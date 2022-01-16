@@ -26,8 +26,7 @@ const KeyFeatures = (props) => {
       </div>
     )
   }
-
-
+  
   return (
     <div className={classes.KeyFeatures}>
       <div className={classes.Title}>

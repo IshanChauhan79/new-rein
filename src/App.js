@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Product from "./components/Product/Product";
 import Float from "./components/UI/Float/Float";
 import ScrollToTop from "./utility/ScrollToTop";
+import Spinner from "./components/UI/Spinner/Spinner";
 
 const Footer = lazy(() => import("./components/Footer/Footer"));
 const ProductsPage = lazy(() =>
@@ -21,13 +22,13 @@ function App() {
       <ScrollToTop />
       <Switch>
         <Route path="/promo" exact>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <PromoPage />
           </Suspense>
         </Route>
-        <Route path="/buynow" exact>
+        <Route path="/buynow/:pd" exact>
           <Header />
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <BuyNow />
           </Suspense>
         </Route>
@@ -35,13 +36,13 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <Header />
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<Spinner />}>
                 <HomePage />
               </Suspense>
             </Route>
             <Route path="/products/:name" exact>
               <Header />
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<Spinner />}>
                 <ProductsPage />
               </Suspense>
             </Route>
@@ -59,7 +60,7 @@ function App() {
             without prior notice. Model availability may vary from location to
             location.
           </div>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <Footer />
           </Suspense>
 
