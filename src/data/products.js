@@ -77,6 +77,8 @@ const products = [
         name: "Commercial/Office Use",
         bimg: "/Imgs/pages/commercial.jpg",
         Pimg: "/Imgs/pages/prod/commercialRO.jpg",
+        link: '/product/commercialro',
+
 
         types: [
           "25 LPH RO",
@@ -128,6 +130,7 @@ const products = [
     types: [
       {
         name: "Under the Counter",
+        link:"/product/undersink1",
         cate: [
           "REIN UNDERSINK UV",
           "REIN UNDERSINK UV+Alkaline ",
@@ -142,6 +145,7 @@ const products = [
       },
       {
         name: "Wall Mountable",
+        link:"/product/wallmountable",
         cate: [
           "REIN STORM UV",
           "REIN STORM UV+Alkaline",
@@ -156,6 +160,7 @@ const products = [
       },
       {
         name: "Commercial/Office Use",
+        link:"/product/commercialro",
         cate: [
           "REIN STORM UV",
           "REIN STORM NF+UV",
@@ -164,6 +169,7 @@ const products = [
       },
       {
         name: "Industrial Use",
+        link:"",
         cate: [],
       },
       {
@@ -226,6 +232,7 @@ const products = [
     types: [
       {
         name: "Portable Softener",
+        link:"/product/indoorsoftener",
         cate: [
           "Bathroom Softener",
           "Washing Machine Softener",
@@ -234,6 +241,7 @@ const products = [
       },
       {
         name: "Whole House Softener",
+        link:"/product/softener",
         cate: [
           "Semi-Automatic Whole House Softener",
           "Smart-Automatic Whole House Softener",
@@ -241,23 +249,83 @@ const products = [
       },
       {
         name: "Industrial",
+        link:"",
         cate: [],
       },
     ],
   },
   {
     title: "Water Heaters",
-    // id: "water-heaters",
-    // route:"water-heaters",
+    id: "water-heaters",
+    // route: "water-heaters",
     navImg: "/Imgs/nav/3.jpg",
+
+    product: [
+      {
+        name: "Electric Instant",
+        // bimg: "/Imgs/pages/portable.jpg",
+        // Pimg: "/Imgs/pages/prod/portableSoftener.jpg",
+        // link: '/product/indoorsoftener',
+
+        // types: [
+        //   "Bathroom Softener",
+        //   "Washing Machine Softener",
+        //   "Kitchen Softener",
+        // ],
+        // points: [
+        //   "iON Exchange Technology",
+        //   "Non-Electric Operation",
+        //   "Salt Regeneration",
+        //   "Anti-Scaling",
+        //   "Reduce Hardness",
+        //   "100% Safe",
+        // ],
+        // sub: "Portable & Indoor single attachment Water Softener for Hard Water Problems",
+      },
+      {
+        name: "Electric Storage",
+        // bimg: "/Imgs/pages/wholehouse.jpg",
+        // Pimg: "/Imgs/pages/prod/wholehouseSoftener.jpg",
+        // link: '/product/softener',
+        // types: [
+        //   "Manual Whole House Softener",
+        //   "Semi-Automatic Whole House Softener",
+        //   "Smart-Automatic Whole House Softener",
+        // ],
+        // points: [
+        //   "Custom Specifications",
+        //   "iON Exchange Technology",
+        //   "Non-Electric Operation",
+        //   "Salt Regeneration",
+        //   "Anti-Scaling",
+        //   "Reduce Hardness",
+        //   "100% Safe",
+        // ],
+        // sub: "Advanced High Capacity Custom Made Whole House Water Softening System for Hard Water Problems",
+      },
+    ],
 
     types: [
       {
-        name: "Electric Storage",
-        cate: [],
+        name: "Electric Instant",
+        // link:"/product/indoorsoftener",
+        cate: [
+          // "Bathroom Softener",
+          // "Washing Machine Softener",
+          // "Kitchen Softener",
+        ],
       },
       {
-        name: "Electric Instant",
+        name: "Electric Storage",
+        // link:"/product/softener",
+        cate: [
+          // "Semi-Automatic Whole House Softener",
+          // "Smart-Automatic Whole House Softener",
+        ],
+      },
+      {
+        name: "Solar Water Heater",
+        link:"",
         cate: [],
       },
     ],
@@ -270,22 +338,26 @@ const products = [
 
     types: [
       {
-        name: "Abc",
+        name: "Portable Air Purifier",
         cate: [],
       },
       {
-        name: "ASD",
+        name: "Commercial Air Purifier",
         cate: [],
       },
     ],
   },
   {
-    title: "Home Appliances",
+    title: "Home & Hygiene",
     // id: "home-appliances",
     // route:"home-appliances",
     navImg: "/Imgs/nav/5.jpg",
 
     types: [
+      {
+        name: "Hand Sanitizer",
+        cate: [],
+      },
       {
         name: "Mixer Blender",
         cate: [],

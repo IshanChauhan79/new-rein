@@ -19,7 +19,7 @@ function TopProducts() {
             desc="Starting at Rs.24,499* | Free Maintenance 1 Year | EMI available"
             cat="NEW"
             catColor="blue"
-            route="/products/water-purifiers"
+            route="/product/commercialro"
             big
           />
         </div>
@@ -31,7 +31,7 @@ function TopProducts() {
               desc="Starting at Rs.10,499* | Free Maintenance 1 Year | EMI available"
               cat="BEST SELLER"
               catColor="yellow"
-              route="/products/water-purifiers"
+              route="/product/undersink1"
             />
             <FeaturedProduct
               img={storm}
@@ -39,7 +39,7 @@ function TopProducts() {
               desc="Starting at Rs.8,499* | Free Maintenance 1 Year | EMI available"
               cat="HOT"
               catColor="red"
-              route="/products/water-purifiers"
+              route="/product/wallmountable"
             />
           </div>
           <div className={classes.SubProductsRow}>
@@ -49,7 +49,7 @@ function TopProducts() {
               desc="Starting at Rs.8,499* | Free Maintenance 1 Year | EMI available"
               cat="HOT"
               catColor="red"
-              route="/products/water-softener"
+              route="/product/softener"
             />
             <FeaturedProduct
               img={plant}
@@ -57,7 +57,7 @@ function TopProducts() {
               desc="Starting at Rs.8,499* | Free Maintenance 1 Year | EMI available"
               cat="NEW"
               catColor="blue"
-              route="/products/water-purifiers"
+              route="/product/commercialro"
             />
           </div>
         </div>

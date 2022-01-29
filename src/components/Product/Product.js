@@ -1,7 +1,6 @@
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import React, { useEffect } from "react";
 import { useParams } from "react-router";
-import { useState } from "react/cjs/react.development";
 import AdditionValues from "./AdditionValues/AdditionValues";
 import KeyFeatures from "./KeyFeatures/KeyFeatures";
 import shareWa from '../../assets/images/promo/shareWa.jpg'

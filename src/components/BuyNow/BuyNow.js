@@ -155,18 +155,7 @@ const Redirect = styled.p`
     margin-top:4rem;
 `
 
-// const formSub = {
-//     "success": {
-//         title: 'submitted',
-//         message: 'message',
-//         link: '/',
-//     },
-//     "error": {
-//         title: 'submitted',
-//         message: 'message',
-//         link: null,
-//     }
-// }
+
 
 
 const name_Reg = /^[a-zA-Z\s]*$/;
@@ -195,19 +184,20 @@ const BuyNow = () => {
     useEffect(() => {
         const prod = params.pd;
         const listData = list[prod];
+        console.log(listData)
         if (listData) {
             const { variants, defaultValue, title } = listData;
             setVarients(variants);
             setVarient(defaultValue.name);
             setPrice(defaultValue.price);
-            setTitle(title);
+            setTitle(title || '' );
             setIsLoading(false)
         }
         else {
             setVarients('');
             setVarient(prod);
             setPrice('');
-            setTitle(prod);
+            setTitle('');
         }
     }, [params]);
 
@@ -408,7 +398,7 @@ const BuyNow = () => {
                                     Thank You
                                 </TyHeading>
 
-                                <img src={"https://res.cloudinary.com/ishandev/image/upload/v1641638858/rein/icons8-sad-50_kj5jbe.png"} alt="" />
+                                <img src={"https://res.cloudinary.com/ishandev/image/upload/v1642847963/rein/happy_10_ub6n64.png"} alt="" />
                             </TyHeadingDiv>
                             <TyPara>
                                 Our team will contact you soon.

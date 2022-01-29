@@ -26,18 +26,35 @@ function ProductDetails(props) {
         className={classes.Category}
         onMouseEnter={(e) => mouseEnterProduct(e, pc.name)}
       >
-        <div
-          className={classes.CategoryName}
-          style={{
-            color:
-              pc.name === showProductsList
-                ? "var(--clr-wb-900)"
-                : "var(--clr-wb-400)",
-            fontSize: pc.name === showProductsList ? "1.8rem" : "1.7rem",
-          }}
-        >
-          {pc.name}
-        </div>
+        {pc.link
+          ? <Link to={pc.link}>
+            <div
+              className={classes.CategoryName}
+              style={{
+                color:
+                  pc.name === showProductsList
+                    ? "var(--clr-wb-900)"
+                    : "var(--clr-wb-400)",
+                fontSize: pc.name === showProductsList ? "1.8rem" : "1.7rem",
+              }}
+            >
+              {pc.name}
+            </div>
+          </Link>
+          :
+          <div
+            className={classes.CategoryName}
+            style={{
+              color:
+                pc.name === showProductsList
+                  ? "var(--clr-wb-900)"
+                  : "var(--clr-wb-400)",
+              fontSize: pc.name === showProductsList ? "1.8rem" : "1.7rem",
+            }}
+          >
+            {pc.name}
+          </div>
+        }
         {pc.cate.length > 0 && (
           <div
             className={classes.Arrow}

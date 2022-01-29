@@ -36,10 +36,14 @@ function BarsMenu(props) {
     setMenuSelected("");
   };
 
-  const openPage = (link) => {
+  const openPage = (link, thirdpage = false) => {
     setMenuSelected("");
     props.closed();
-    history.push("/products/" + link);
+    if (thirdpage) {
+      history.push(link);
+    } else {
+      history.push("/products/" + link);
+    }
   };
   const productList = data.map((pd, i) => (
     <div className={classes.MenuType} key={pd.title}>
@@ -66,7 +70,7 @@ function BarsMenu(props) {
         </div>
         <div>
           <div className={classes.Title}>{data[sideMenu].title}</div>
-          <DropDown data={data[sideMenu]["types"]} />
+          <DropDown data={data[sideMenu]["types"]} openPage={openPage} />
         </div>
       </div>
     );

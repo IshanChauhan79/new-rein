@@ -5,6 +5,7 @@ import animation from "./animation.module.css";
 
 import { CSSTransition } from "react-transition-group";
 import arrowDown from "../../../assets/images/arrowDown.png";
+import { Link } from "react-router-dom";
 
 function DropDown(props) {
   const [menuOpen, setMenuOpen] = useState(null);
@@ -30,14 +31,19 @@ function DropDown(props) {
     <div className={classes.Menu} key={pd.name}>
       <div
         className={classes.MenuName}
-        onClick={() => menuclicked(i)}
+
         style={{ fontFamily: i === menuOpen ? "amiko-bold" : "amiko-font" }}
       >
-        <div>{pd.name}</div>
+        {pd.link
+          ? <div onClick={() => props.openPage(pd.link,true)}>{pd.name}</div>
+          : <div>{pd.name}</div>
+        }
+
         <img
           src={arrowDown}
-          alt="X"
+          alt=">"
           height="12px"
+          onClick={() => menuclicked(i)}
           style={{
             transform: i === menuOpen ? "rotateX(180deg)" : "rotateX(0deg)",
           }}

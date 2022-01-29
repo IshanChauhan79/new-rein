@@ -55,9 +55,17 @@ function ProductsPage() {
           <div className={classes.Heart}>
             <img src={heart} alt=""></img>
           </div>
-          <div className={classes.ProductImg}>
-            <img src={process.env.PUBLIC_URL + el.Pimg} alt="" />
-          </div>
+          {el.link
+            ? <Link to={el.link} style={{ textDecoration: "none" }}>
+              <div className={classes.ProductImg}>
+                <img src={process.env.PUBLIC_URL + el.Pimg} alt="" />
+              </div>
+            </Link>
+            : <div className={classes.ProductImg}>
+              <img src={process.env.PUBLIC_URL + el.Pimg} alt="" />
+            </div>
+          }
+
           {/* <div className={classes.Color}>
             Color: blue
             <div>
@@ -70,7 +78,13 @@ function ProductsPage() {
             </div>
           </div> */}
           <div>
-            <div className={classes.MobileTitle}>{el.name}</div>
+            {el.link
+              ? <Link to={el.link} style={{ textDecoration: "none" }}>
+                <div className={classes.MobileTitle}>{el.name}</div>
+              </Link>
+              : <div className={classes.MobileTitle}>{el.name}</div>
+            }
+
           </div>
           <div className={classes.Variants}>
             Variants:
@@ -86,12 +100,12 @@ function ProductsPage() {
               <li key={point}>{point}</li>
             ))}
           </ul>
-          {el.link
-            ? <Link to={el.link} style={{textDecoration: "none"}}>
-                <div className={classes.LearnMore}>Learn More</div>
-              </Link>
-            : <div className={classes.LearnMore}>Learn More</div>
 
+          {el.link
+            ? <Link to={el.link} style={{ textDecoration: "none" }}>
+              <div className={classes.LearnMore}>Learn More</div>
+            </Link>
+            : <div className={classes.LearnMore}>Learn More</div>
           }
 
 

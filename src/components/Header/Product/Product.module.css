@@ -27,3 +27,16 @@
     font-weight: 600;
     /* border-radius: 16px; */
 }
+@media only screen and (max-width: 47em) {
+    .Title{
+        font-size: 1.4rem;
+        padding: 0.3rem 0;
+    }
+    .VarientButton{
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    .BuyButton{
+        font-size: 1.1rem;
+    }
+}
