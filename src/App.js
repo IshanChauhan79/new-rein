@@ -15,6 +15,8 @@ const ProductsPage = lazy(() =>
 );
 const HomePage = lazy(() => import("./components/Homepage/Homepage"));
 const PromoPage = lazy(() => import("./components/Promotion/PromoPage"));
+const Privacy = lazy(() => import('./components/Privacy/Privacy'));
+const TandC = lazy(() => import('./components/Privacy/TandC'));
 
 function App() {
   return (
@@ -31,6 +33,14 @@ function App() {
           <Suspense fallback={<Spinner />}>
             <BuyNow />
           </Suspense>
+        </Route>
+        <Route path='/privacy-policy'>
+          <Header />
+          <Suspense fallback={<Spinner />}><Privacy /></Suspense>
+        </Route>
+        <Route path='/terms-and-condition'>
+          <Header />
+          <Suspense fallback={<Spinner />}><TandC /></Suspense>
         </Route>
         <Route path="/">
           <Switch>

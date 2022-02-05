@@ -256,7 +256,7 @@ const products = [
   },
   {
     title: "Water Heaters",
-    id: "water-heaters",
+    // id: "water-heaters",
     // route: "water-heaters",
     navImg: "/Imgs/nav/3.jpg",
 

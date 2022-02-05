@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import CSSTransition from "react-transition-group/CSSTransition";
 
 import DropDown from "../../UI/DropDown/DropDown";

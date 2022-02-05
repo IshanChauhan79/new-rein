@@ -5,7 +5,6 @@ import animation from "./animation.module.css";
 
 import { CSSTransition } from "react-transition-group";
 import arrowDown from "../../../assets/images/arrowDown.png";
-import { Link } from "react-router-dom";
 
 function DropDown(props) {
   const [menuOpen, setMenuOpen] = useState(null);
