@@ -17,6 +17,8 @@ const HomePage = lazy(() => import("./components/Homepage/Homepage"));
 const PromoPage = lazy(() => import("./components/Promotion/PromoPage"));
 const Privacy = lazy(() => import('./components/Privacy/Privacy'));
 const TandC = lazy(() => import('./components/Privacy/TandC'));
+const Blogs = lazy(() => import('./components/Blogs'));
+const Blog = lazy(() => import('./components/Blogs/Blog'));
 
 function App() {
   return (
@@ -26,6 +28,16 @@ function App() {
         <Route path="/promo" exact>
           <Suspense fallback={<Spinner />}>
             <PromoPage />
+          </Suspense>
+        </Route>
+        <Route path="/blogs" exact>
+          <Suspense fallback = {<Spinner />}>
+            <Blogs />
+          </Suspense>
+        </Route>
+        <Route path="/blog/:id" exact>
+          <Suspense fallback = {<Spinner />}>
+            <Blog />
           </Suspense>
         </Route>
         <Route path="/buynow/:pd" exact>
