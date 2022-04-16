@@ -30,7 +30,7 @@ const varients = [
 const formType = ["Call Request", "Buy Now"];
 
 function Promotion(props) {
-  const [formSubmit, setFormSubmit] = useState(false);
+  // const [formSubmit, setFormSubmit] = useState(false);
   const [checked, setChecked] = useState(true);
   const [isError, setIsError] = useState(false);
   const number = useRef();
@@ -47,7 +47,7 @@ function Promotion(props) {
           data: new Date(),
         })
         .then((response) => {
-          setFormSubmit(true);
+          // setFormSubmit(true);
           number.current.value = "";
           setIsError(false);
         })

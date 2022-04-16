@@ -27,6 +27,7 @@
   border: 0;
   margin-right: 1.5rem;
   background-color: var(--clr-wb-100);
+  color: blue;
 }
 .SearchBox {
   height: 3rem;

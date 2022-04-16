@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 // import { Link } from "react-router-dom";
 import CSSTransition from "react-transition-group/CSSTransition";
@@ -20,8 +20,8 @@ function BarsMenu(props) {
   const history = useHistory();
   const [menuSelected, setMenuSelected] = useState("");
   const [sideMenu, setSideMenu] = useState("");
-  const nodeRef = useRef(null);
-  const nodeRef2 = useRef(null);
+  // const nodeRef = useRef(null);
+  // const nodeRef2 = useRef(null);
 
   const data = [...products, support];
   const closeClicked = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, useParams } from "react-router";
+// import { useLocation, useParams } from "react-router";
 import { ReactComponent as Search } from "../../assets/images/search.svg";
 import { ReactComponent as Bar } from "../../assets/images/bars.svg";
 

@@ -10,13 +10,13 @@ import close from "../../../assets/images/close.png";
 const formType = ["Call Request", "Buy Now"];
 
 function Footer(props) {
-  const [height, setHeight] = useState(0);
-  const [formSubmit, setFormSubmit] = useState(false);
+  // const [height, setHeight] = useState(0);
+  // const [formSubmit, setFormSubmit] = useState(false);
   const [checked, setChecked] = useState(true);
   const [isError, setIsError] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
   const number = useRef();
-  const nodeRef = useRef(null);
+  // const nodeRef = useRef(null);
 
   const { menu, setMenu } = props;
 
@@ -33,7 +33,7 @@ function Footer(props) {
           data: new Date(),
         })
         .then((response) => {
-          setFormSubmit(true);
+          // setFormSubmit(true);
           number.current.value = "";
           closeMenu();
           setMenu(false)
@@ -49,8 +49,8 @@ function Footer(props) {
   };
 
   const calcHeight = (el) => {
-    const claculatedHeight = el.offsetHeight;
-    setHeight(claculatedHeight);
+    // const claculatedHeight = el.offsetHeight;
+    // setHeight(claculatedHeight);
   };
   const openMenu = (el) => {
     setMenu(el);

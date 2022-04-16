@@ -1,8 +1,9 @@
 import React from "react";
+import { Blogs } from "../HelperComponents/styledComponents";
 
 
 const TopBlog = () => {
-  return <div ></div>;
+  return <Blogs >top blog</Blogs>;
 }
 
 export default TopBlog;

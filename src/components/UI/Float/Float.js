@@ -1,4 +1,4 @@
-import React, { useState,useRef } from "react";
+import React, { useState } from "react";
 
 import classes from "./Float.module.css";
 import call from "../../../assets/images/call2.png";
@@ -10,7 +10,7 @@ import { CSSTransition } from "react-transition-group";
 function Float() {
   const [floatOpen, setFloatOpen] = useState(false);
   const [height, setHeight] = useState(0);
-  const nodeRef = useRef(null);
+  // const nodeRef = useRef(null);
   const calcHeight = (el) => {
     const height = el.offsetHeight;
     setHeight(height);
