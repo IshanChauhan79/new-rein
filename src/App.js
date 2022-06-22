@@ -30,11 +30,11 @@ function App() {
             <PromoPage />
           </Suspense>
         </Route>
-        <Route path="/blogs" exact>
+        {/* <Route path="/blogs" exact>
           <Suspense fallback = {<Spinner />}>
             <Blogs />
           </Suspense>
-        </Route>
+        </Route> */}
         <Route path="/blog/:id" exact>
           <Suspense fallback = {<Spinner />}>
             <Blog />
